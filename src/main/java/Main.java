@@ -15,7 +15,7 @@ import static spark.Spark.get;
 public class Main {
 
     public static void main(String[] args) {
-        String dbName = "acebook";
+        String dbName = "getpacked";
         for(String a:args) {
             dbName = a;
         }
@@ -34,7 +34,7 @@ public class Main {
 
 
         get("/", (req, res) -> "Hello World");
-
+            System.out.println("hello world");
 
         get("/posts", (req, res) -> {
 
