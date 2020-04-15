@@ -16,9 +16,9 @@
   <body>
     <h1>Go on a new trip!</h1>
 
-    <form action="/pickhotel">
-      <label for="nametrip">Name your trip!</label><br>
-      <input type="text" id="nametrip" name="nametrip"><br>
+    <form action="/pickhotel" method="post">
+      <label for="trip_name">Name your trip!</label><br>
+      <input type="text" id="trip_name" name="trip_name"><br>
        <label for="destination">Pick a destination!</label>
         <select id="destination" name="destination">
           <option value="NewYork">NewYork</option>

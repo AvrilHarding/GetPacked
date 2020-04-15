@@ -36,7 +36,7 @@ public class Main {
 
 
         get("/dashboard", (req, res) -> {
-
+            System.out.println("Hello Avril");
 
             HashMap dashboard = new HashMap();
 
@@ -48,19 +48,22 @@ public class Main {
 
         get("/newtrip", (req, res) -> {
 
-//            HashMap yourtrips = new HashMap();
+            HashMap trip = new HashMap();
 
-            return new ModelAndView(new HashMap(), "templates/newtrip.vtl");
+            return new ModelAndView(trip, "templates/newtrip.vtl");
         }, new VelocityTemplateEngine());
 
-//        post("/newtrip", (req, res) -> {
-//
-//            // add query params here.
-//
-//            response.redirect("/schedule");
-//            return null;
-//
-//        });
+        post("/newtrip", (request, response) -> {
+
+            // add query params here.
+            String trip_name = request.queryParams("trip_name");
+            String destination = request.queryParams("destination");
+            model.createTrip(trip_name, destination);
+
+            response.redirect("/pickhotel");
+            return null;
+
+        });
 
 
         get("/yourtrips", (req, res) -> {

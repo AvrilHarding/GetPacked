@@ -3,6 +3,5 @@ create table activities (
  activity_name VARCHAR(60),
  activity_descr VARCHAR(280),
  destination VARCHAR(60),
- date DATE,
  activity_tags VARCHAR(60)
 );

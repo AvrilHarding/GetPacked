@@ -55,7 +55,15 @@ class Sql2oModelTest {
     }
 
     @Test
-    void createPost() {
+    void createTrip() {
+        Connection conn = sql2o.beginTransaction();
+        conn.createQuery("insert into trips(trip_id, trip_name, destination) VALUES (:trip_id, :trip_name, :destination)")
+                .addParameter("trip_id", id)
+                .addParameter("trip_name", "Getting some sun")
+                .addParameter("destination", "Barbados")
+                .executeUpdate();
+        conn.commit();
+
     }
 
     @Test

@@ -3,7 +3,6 @@ package models;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 
-import java.util.List;
 import java.util.UUID;
 
 public class Sql2oModel implements Model {
@@ -16,15 +15,18 @@ public class Sql2oModel implements Model {
     }
 
     @Override
-    public UUID createPost(String title, String content) {
-        //TODO - implement this
-        return null;
+    public UUID createTrip(String trip_name, String destination) {
+        try (Connection conn = sql2o.beginTransaction()) {
+            UUID tripUuid = UUID.randomUUID();
+            conn.createQuery("insert into trips(trip_id, trip_name, destination) VALUES (:trip_id, :trip_name, :destination)")
+                    .addParameter("trip_id", tripUuid)
+                    .addParameter("trip_name", trip_name)
+                    .addParameter("destination", destination)
+                    .executeUpdate();
+            conn.commit();
+            return tripUuid;
+        }
     }
 
-    @Override
-    public List<Post> getAllPosts() {
-        //TODO - implement this
-        return null;
-    }
 
 }
