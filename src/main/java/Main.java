@@ -38,32 +38,35 @@ public class Main {
         get("/dashboard", (req, res) -> {
             System.out.println("Hello Avril");
 
-            HashMap dashboard = new HashMap();
-
+//            HashMap dashboard = new HashMap();
 
             return new ModelAndView(new HashMap(), "templates/dashboard.vtl");
         }, new VelocityTemplateEngine());
 
 
-
         get("/newtrip", (req, res) -> {
 
-            HashMap trip = new HashMap();
+//            HashMap trip = new HashMap();
 
-            return new ModelAndView(trip, "templates/newtrip.vtl");
+            return new ModelAndView(new HashMap(), "templates/newtrip.vtl");
         }, new VelocityTemplateEngine());
 
         post("/newtrip", (request, response) -> {
 
-            // add query params here.
-            String trip_name = request.queryParams("trip_name");
-            String destination = request.queryParams("destination");
+            String trip_name = request.queryParams("trip_name_1");
+            String destination = request.queryParams("destination_1");
             model.createTrip(trip_name, destination);
 
             response.redirect("/pickhotel");
             return null;
 
         });
+
+        get("/pickhotel", (req, res) -> {
+
+//
+            return new ModelAndView(new HashMap(), "templates/pickhotel.vtl");
+        }, new VelocityTemplateEngine());
 
 
         get("/yourtrips", (req, res) -> {
@@ -75,13 +78,6 @@ public class Main {
             return new ModelAndView(new HashMap(), "templates/yourtrips.vtl");
         }, new VelocityTemplateEngine());
 
-
-        get("/pickhotel", (req, res) -> {
-
-
-//
-            return new ModelAndView(new HashMap(), "templates/pickhotel.vtl");
-        }, new VelocityTemplateEngine());
 
         get("/schedule", (req, res) -> {
 
