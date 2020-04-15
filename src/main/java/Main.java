@@ -11,6 +11,7 @@ import java.util.HashMap;
 import java.util.UUID;
 
 import static spark.Spark.get;
+import static spark.Spark.post;
 
 public class Main {
 
@@ -33,16 +34,59 @@ public class Main {
         Model model = new Sql2oModel(sql2o);
 
 
-        get("/", (req, res) -> "Hello World");
-            System.out.println("hello world");
 
-        get("/posts", (req, res) -> {
+        get("/dashboard", (req, res) -> {
 
 
-            HashMap posts = new HashMap();
+            HashMap dashboard = new HashMap();
 
 
-            return new ModelAndView(posts, "templates/posts.vtl");
+            return new ModelAndView(new HashMap(), "templates/dashboard.vtl");
+        }, new VelocityTemplateEngine());
+
+
+
+        get("/newtrip", (req, res) -> {
+
+//            HashMap yourtrips = new HashMap();
+
+            return new ModelAndView(new HashMap(), "templates/newtrip.vtl");
+        }, new VelocityTemplateEngine());
+
+//        post("/newtrip", (req, res) -> {
+//
+//            // add query params here.
+//
+//            response.redirect("/schedule");
+//            return null;
+//
+//        });
+
+
+        get("/yourtrips", (req, res) -> {
+
+
+//            HashMap yourtrips = new HashMap();
+
+
+            return new ModelAndView(new HashMap(), "templates/yourtrips.vtl");
+        }, new VelocityTemplateEngine());
+
+
+        get("/pickhotel", (req, res) -> {
+
+
+//
+            return new ModelAndView(new HashMap(), "templates/pickhotel.vtl");
+        }, new VelocityTemplateEngine());
+
+        get("/schedule", (req, res) -> {
+
+
+//            HashMap schedule = new HashMap();
+
+
+            return new ModelAndView(new HashMap(), "templates/schedule.vtl");
         }, new VelocityTemplateEngine());
     }
 }
