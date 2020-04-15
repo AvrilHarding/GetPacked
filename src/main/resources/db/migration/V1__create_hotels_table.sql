@@ -6,8 +6,5 @@ create table hotels (
  room_occupancy_limit int,
  price_pppn int,
  hotel_star_rating int,
- city VARCHAR(60),
- country VARCHAR(60),
- date DATE,
- number_guests_booked int
+ destination VARCHAR(60)
 );
