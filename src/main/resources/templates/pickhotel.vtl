@@ -29,10 +29,13 @@
           #foreach( $hotel in $hotel )
           <tr>
             <th scope="row">
-            $hotel.hotel_name
-            <p class="like custom-button">
-              <i class="fa fa-heart aria-hidden="true"></i>
-            </>
+            Hotel name: $hotel.hotel_name
+            Description: $hotel.hotel_descr
+            Room type: $hotel.room_name
+            Room occupancy: $hotel.room_occupancy_limit
+            Room Price Pp/Pn: $hotel.price_pppn
+            Star Rating: $hotel.hotel_star_rating
+            Destination: $hotel.destination
           </tr>
            #end
         </tbody>
