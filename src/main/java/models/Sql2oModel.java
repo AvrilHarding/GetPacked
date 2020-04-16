@@ -40,4 +40,14 @@ public class Sql2oModel implements Model {
             return hotel;
         }
     }
+
+    @Override
+    public void addHotel(String hotel_name) {
+        try (Connection conn = sql2o.open()) {
+            conn.createQuery("insert into trips(hotel_name) VALUES (:hotel_name)")
+                    .addParameter("hotel_name", hotel_name)
+                    .executeUpdate();
+        }
+
+    }
 }

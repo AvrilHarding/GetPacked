@@ -73,6 +73,17 @@ public class Main {
         }, new VelocityTemplateEngine());
 
 
+        post("/pickhotel", (request, response) -> {
+
+            String hotel_name = request.queryParams("hotel_name");
+            model.addHotel(hotel_name);
+
+            response.redirect("/schedule");
+
+            return null;
+        });
+
+
         get("/yourtrips", (req, res) -> {
 
 

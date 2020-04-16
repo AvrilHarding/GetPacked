@@ -24,7 +24,7 @@
             <th scope="col" style="font-size:20px; color:cornsilk">Previous post</th>
           </tr>
         </thead>
-
+<form method="post" action="/pickhotel">
         <tbody>
           #foreach( $hotel in $hotel )
           <tr>
@@ -36,11 +36,12 @@
             Room Price Pp/Pn: $hotel.price_pppn
             Star Rating: $hotel.hotel_star_rating
             Destination: $hotel.destination
+            <input type="submit" value="Submit" id="hotel_name" name="hotel_name">
           </tr>
            #end
         </tbody>
       </table>
-
+</form>
 
   </body>
 </html>
