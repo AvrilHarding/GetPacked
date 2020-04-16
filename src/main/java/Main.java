@@ -76,7 +76,8 @@ public class Main {
         post("/pickhotel", (request, response) -> {
 
             String hotel_name = request.queryParams("hotel_name");
-            model.addHotel(hotel_name);
+            UUID trip_id = UUID.fromString(request.queryParams("trip_id"));
+            model.addHotel(hotel_name, trip_id);
 
             response.redirect("/schedule");
 
