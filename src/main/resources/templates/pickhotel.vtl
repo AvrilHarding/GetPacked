@@ -3,19 +3,41 @@
   <head>
     <title>GetPacked!</title>
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+
+    <style>
+
+    body {
+        background: linear-gradient(to right,#f7c981,#ed7210,#d4970e);
+    }
+    
+
+
+    </style>
   </head>
   <body>
     <h1>Pick your Hotel & room choice. Select occupancy and dates!</h1>
 
-<div class="container card border-dark;" style="max-width: 50rem;">
-  <div class="card-body">
-    <h5 class="card-title">Hotel name</h5>
-    <p class="card-text">hotel description</p>
-    <footer class="blockquote-footer">Hotel<cite title="Source Title">star rating</cite></footer>
-  </div>
-</div>
-<form action="/schedule" method="get">
-<button type="submit" value="Submit">Select</button>
-</form>
+
+      <table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col" style="font-size:20px; color:cornsilk">Previous post</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          #foreach( $hotel in $hotel )
+          <tr>
+            <th scope="row">
+            $hotel.hotel_name
+            <p class="like custom-button">
+              <i class="fa fa-heart aria-hidden="true"></i>
+            </>
+          </tr>
+           #end
+        </tbody>
+      </table>
+
+
   </body>
 </html>

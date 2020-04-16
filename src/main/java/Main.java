@@ -64,8 +64,12 @@ public class Main {
 
         get("/pickhotel", (req, res) -> {
 
-//
-            return new ModelAndView(new HashMap(), "templates/pickhotel.vtl");
+            model.getAllHotels();
+            HashMap hotel = new HashMap();
+            hotel.put("hotel", model.getAllHotels());
+
+
+            return new ModelAndView(hotel, "templates/pickhotel.vtl");
         }, new VelocityTemplateEngine());
 
 

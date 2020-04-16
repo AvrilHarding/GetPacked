@@ -3,6 +3,7 @@ package models;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
 
+import java.util.List;
 import java.util.UUID;
 
 public class Sql2oModel implements Model {
@@ -26,7 +27,17 @@ public class Sql2oModel implements Model {
             conn.commit();
 
         }
+
     }
 
+    @Override
+    public List<Hotel> getAllHotels() {
+        try (Connection conn = sql2o.open()) {
 
+            List<Hotel> hotel = conn.createQuery("select * from hotels")
+
+                    .executeAndFetch(Hotel.class);
+            return hotel;
+        }
+    }
 }

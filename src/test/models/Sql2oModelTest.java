@@ -11,6 +11,8 @@ import org.sql2o.Sql2o;
 import org.sql2o.converters.UUIDConverter;
 import org.sql2o.quirks.PostgresQuirks;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.UUID;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -66,7 +68,5 @@ class Sql2oModelTest {
 
     }
 
-    @Test
-    void getAllPosts() {
-    }
+
 }
