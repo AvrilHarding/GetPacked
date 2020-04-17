@@ -16,14 +16,13 @@ public class Sql2oModel implements Model {
     }
 
     @Override
-    public void createTrip(String trip_name, String destination, String hotel_name) {
+    public void createTrip(String trip_name, String destination) {
         try (Connection conn = sql2o.beginTransaction()) {
             UUID tripUuid = UUID.randomUUID();
             conn.createQuery("insert into trips(trip_id, trip_name, destination) VALUES (:trip_id, :trip_name, :destination)")
                     .addParameter("trip_id", tripUuid)
                     .addParameter("trip_name", trip_name)
                     .addParameter("destination", destination)
-                    .addParameter("hotel_name", hotel_name)
                     .executeUpdate();
             conn.commit();
 
@@ -76,12 +75,12 @@ public class Sql2oModel implements Model {
             return activities;
         }
     }
-}
+
 
     public List<Trip>getAllTrips() {
         try (Connection conn = sql2o.open()) {
 
-            List<Trip> trips = conn.createQuery("select trip_name, hotel_name, destination from trips")
+            List<Trip> trips = conn.createQuery("select trip_name, destination, hotel_name from trips")
 
                     .executeAndFetch(Trip.class);
             return trips;
