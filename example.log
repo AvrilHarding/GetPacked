@@ -1,3 +1,32 @@
+
+DEBUG Thread-0 org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @7175ms ReservedThreadExecutor@3c2f9efe{s=0/4,p=0}@SelectorManager@ServerConnector@1458699a{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+DEBUG Thread-0 org.eclipse.jetty.util.component.AbstractLifeCycle - starting org.eclipse.jetty.io.ManagedSelector@34de357 id=0 keys=-1 selected=-1 actions=0
+DEBUG Thread-0 org.eclipse.jetty.util.component.AbstractLifeCycle - starting EatWhatYouKill@1b509cbe/SelectorProducer@18bce9fa/IDLE/ReservedThreadExecutor@3c2f9efe{s=0/4,p=0}@SelectorManager@ServerConnector@1458699a{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+DEBUG Thread-0 org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @7186ms EatWhatYouKill@1b509cbe/SelectorProducer@18bce9fa/IDLE/ReservedThreadExecutor@3c2f9efe{s=0/4,p=0}@SelectorManager@ServerConnector@1458699a{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+DEBUG Thread-0 org.eclipse.jetty.util.thread.QueuedThreadPool - queue org.eclipse.jetty.io.ManagedSelector$$Lambda$92/0x0000000800c09040@d3fc161
+DEBUG qtp763525806-16 org.eclipse.jetty.util.thread.QueuedThreadPool - run org.eclipse.jetty.io.ManagedSelector$$Lambda$92/0x0000000800c09040@d3fc161
+DEBUG Thread-0 org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @7284ms org.eclipse.jetty.io.ManagedSelector@34de357 id=0 keys=0 selected=0 actions=0
+DEBUG qtp763525806-16 org.eclipse.jetty.util.thread.strategy.EatWhatYouKill - EatWhatYouKill@1b509cbe/SelectorProducer@18bce9fa/IDLE/ReservedThreadExecutor@3c2f9efe{s=0/4,p=0}@SelectorManager@ServerConnector@1458699a{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} produce
+DEBUG Thread-0 org.eclipse.jetty.util.component.AbstractLifeCycle - starting org.eclipse.jetty.io.ManagedSelector@1becbd31 id=1 keys=-1 selected=-1 actions=0
+DEBUG qtp763525806-16 org.eclipse.jetty.io.ManagedSelector - action=null wakeup=false
+DEBUG qtp763525806-16 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@271c45e2 waiting on select
+DEBUG Thread-0 org.eclipse.jetty.util.component.AbstractLifeCycle - starting EatWhatYouKill@7b4abdc5/SelectorProducer@64607b7e/IDLE/ReservedThreadExecutor@3c2f9efe{s=0/4,p=0}@SelectorManager@ServerConnector@1458699a{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+DEBUG Thread-0 org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @7354ms EatWhatYouKill@7b4abdc5/SelectorProducer@64607b7e/IDLE/ReservedThreadExecutor@3c2f9efe{s=0/4,p=0}@SelectorManager@ServerConnector@1458699a{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+DEBUG Thread-0 org.eclipse.jetty.util.thread.QueuedThreadPool - queue org.eclipse.jetty.io.ManagedSelector$$Lambda$92/0x0000000800c09040@5f5ef444
+DEBUG qtp763525806-17 org.eclipse.jetty.util.thread.QueuedThreadPool - run org.eclipse.jetty.io.ManagedSelector$$Lambda$92/0x0000000800c09040@5f5ef444
+DEBUG Thread-0 org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @7413ms org.eclipse.jetty.io.ManagedSelector@1becbd31 id=1 keys=0 selected=0 actions=0
+DEBUG qtp763525806-17 org.eclipse.jetty.util.thread.strategy.EatWhatYouKill - EatWhatYouKill@7b4abdc5/SelectorProducer@64607b7e/IDLE/ReservedThreadExecutor@3c2f9efe{s=0/4,p=0}@SelectorManager@ServerConnector@1458699a{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} produce
+DEBUG qtp763525806-17 org.eclipse.jetty.io.ManagedSelector - action=null wakeup=false
+DEBUG qtp763525806-17 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@f9fd13b waiting on select
+DEBUG Thread-0 org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @7432ms SelectorManager@ServerConnector@1458699a{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+DEBUG Thread-0 org.eclipse.jetty.util.component.ContainerLifeCycle - ServerConnector@1458699a{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} added {acceptor-0@2ea6b4aa,POJO}
+DEBUG Thread-0 org.eclipse.jetty.util.thread.QueuedThreadPool - queue acceptor-0@2ea6b4aa
+DEBUG qtp763525806-18 org.eclipse.jetty.util.thread.QueuedThreadPool - run acceptor-0@2ea6b4aa
+INFO Thread-0 org.eclipse.jetty.server.AbstractConnector - Started ServerConnector@1458699a{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+DEBUG Thread-0 org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @7465ms ServerConnector@1458699a{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+INFO Thread-0 org.eclipse.jetty.server.Server - Started @7466ms
+DEBUG Thread-0 org.eclipse.jetty.util.component.AbstractLifeCycle - STARTED @7467ms org.eclipse.jetty.server.Server@5ac278a6[9.4.8.v20171121]
+
 DEBUG Thread-0 org.eclipse.jetty.util.component.ContainerLifeCycle - org.eclipse.jetty.io.ManagedSelector@1ee35e12 id=0 keys=-1 selected=-1 actions=0 added {EatWhatYouKill@15d6ef3c/SelectorProducer@2dd54ff9/IDLE/ReservedThreadExecutor@129108ee{s=0/4,p=0}@SelectorManager@ServerConnector@665e647d{HTTP/1.1,[http/1.1]}{0.0.0.0:4567},MANAGED}
 DEBUG Thread-0 org.eclipse.jetty.util.component.ContainerLifeCycle - SelectorManager@ServerConnector@665e647d{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} added {org.eclipse.jetty.io.ManagedSelector@1ee35e12 id=0 keys=-1 selected=-1 actions=0,AUTO}
 DEBUG Thread-0 org.eclipse.jetty.util.component.ContainerLifeCycle - EatWhatYouKill@3ceeedfd/SelectorProducer@3b43c71e/IDLE/ReservedThreadExecutor@129108ee{s=0/4,p=0}@SelectorManager@ServerConnector@665e647d{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} added {SelectorProducer@3b43c71e,POJO}
@@ -289,3 +318,4 @@ DEBUG qtp640955850-17 org.eclipse.jetty.util.thread.QueuedThreadPool - ran org.e
 DEBUG qtp640955850-19 org.eclipse.jetty.io.ManagedSelector - Forcing selection, actions=0
 DEBUG qtp640955850-19 org.eclipse.jetty.io.ManagedSelector - action=null wakeup=false
 DEBUG qtp640955850-19 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@e728bd6 waiting on select
+

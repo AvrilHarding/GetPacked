@@ -66,6 +66,18 @@ public class Sql2oModel implements Model {
     }
 
     @Override
+
+    public List<Activities> getAllActivities() {
+        try (Connection conn = sql2o.open()) {
+
+            List<Activities> activities = conn.createQuery("select * from activities")
+
+                    .executeAndFetch(Activities.class);
+            return activities;
+        }
+    }
+}
+
     public List<Trip>getAllTrips() {
         try (Connection conn = sql2o.open()) {
 
@@ -76,3 +88,4 @@ public class Sql2oModel implements Model {
         }
     }
 }
+

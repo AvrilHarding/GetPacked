@@ -16,11 +16,11 @@ public class Main {
 
     public static void main(String[] args) {
         String dbName = "getpacked";
-        for(String a:args) {
+        for (String a : args) {
             dbName = a;
         }
         System.out.println(dbName);
-        Flyway flyway = Flyway.configure().dataSource("jdbc:postgresql://localhost:5432/"+dbName, null, null).load();
+        Flyway flyway = Flyway.configure().dataSource("jdbc:postgresql://localhost:5432/" + dbName, null, null).load();
         flyway.migrate();
 
         Sql2o sql2o = new Sql2o("jdbc:postgresql://localhost:5432/" + dbName, null, null, new PostgresQuirks() {
@@ -31,7 +31,6 @@ public class Main {
         });
 
         Model model = new Sql2oModel(sql2o);
-
 
 
         get("/dashboard", (req, res) -> {
@@ -85,10 +84,21 @@ public class Main {
 
 
         get("/schedule", (req, res) -> {
-            model.getAllRestaurants();
-            HashMap restaurants = new HashMap();
-            restaurants.put("restaurants", model.getAllRestaurants());
-            return new ModelAndView(restaurants, "templates/schedule.vtl");
+
+
+
+//            model.getAllRestaurants();
+            HashMap restaurants_and_activities = new HashMap();
+            restaurants_and_activities.put("restaurants", model.getAllRestaurants());
+
+//            model.getAllActivities();
+//            HashMap activities = new HashMap();
+            restaurants_and_activities.put("activities", model.getAllActivities());
+
+            return new ModelAndView(restaurants_and_activities,  "templates/schedule.vtl");
+
+
         }, new VelocityTemplateEngine());
+
     }
 }
