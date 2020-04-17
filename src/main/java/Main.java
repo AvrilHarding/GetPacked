@@ -49,7 +49,7 @@ public class Main {
             String trip_name = request.queryParams("trip_name_1");
             String destination = request.queryParams("destination_1");
             String hotel_name = null;
-            model.createTrip(trip_name, destination, hotel_name);
+            model.createTrip(trip_name, destination);
             request.session().attribute("trip_name", trip_name);
             response.redirect("/pickhotel");
             return null;
@@ -73,31 +73,18 @@ public class Main {
         });
 
         get("/yourtrips", (req, res) -> {
-            System.out.println("we get this far");
             model.getAllTrips();
-            System.out.println("we get this far2");
             HashMap trips = new HashMap();
             trips.put("trips", model.getAllTrips());
-            System.out.println("3");
             return new ModelAndView(trips, "templates/yourtrips.vtl");
         }, new VelocityTemplateEngine());
 
 
         get("/schedule", (req, res) -> {
-
-
-
-//            model.getAllRestaurants();
             HashMap restaurants_and_activities = new HashMap();
             restaurants_and_activities.put("restaurants", model.getAllRestaurants());
-
-//            model.getAllActivities();
-//            HashMap activities = new HashMap();
             restaurants_and_activities.put("activities", model.getAllActivities());
-
             return new ModelAndView(restaurants_and_activities,  "templates/schedule.vtl");
-
-
         }, new VelocityTemplateEngine());
 
     }
