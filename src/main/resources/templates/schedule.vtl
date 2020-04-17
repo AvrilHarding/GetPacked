@@ -1,27 +1,105 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>GetPacked!</title>
-    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
-  </head>
-  <body>
-    <h1>Pick some activities and your restaurants! </h1>
+<html lang="en">
+<head>
+<title>GetPacked!</title>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
 
-     <table class="table table-hover">
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(to right,#f7c981,#ed7210,#d4970e);
+}
 
-            <tbody>
-              #foreach( $restaurants in $restaurants )
-              <tr>
-                <th scope="row">
-                 Restaurant name:$restaurants.restaurant_name,
-                 Restaurant Description: $restaurants.restaurant_descr,
-                 Star Rating: $restaurants.restaurant_star_rating,
-                 Destination: $restaurants.destination,
-                 $restaurants.cuisine_tags,
-               #end
-            </tbody>
-          </table>
+/* Style the header */
+header {
+  background-color: linear-gradient(to right,#f7c981,#ed7210,#d4970e);
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Container for flexboxes */
+section {
+  display: -webkit-flex;
+  display: flex;
+}
+
+/* Style the navigation menu */
+nav {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  background: #ffc375;
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: circle;
+  padding: 0;
+}
+
+/* Style the content */
+article {
+  -webkit-flex: 3;
+  -ms-flex: 3;
+  flex: 3;
+  background-color: #f1f1f1;
+  padding: 10px;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the menu and the content (inside the section) sit on top of each other instead of next to each other */
+@media (max-width: 600px) {
+  section {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Schedule</h2>
+</header>
+
+<section>
+  <nav>
+  <h3>Restaurants</h3>
+    <ul>
+    #foreach( $restaurants in $restaurants )
+      <li>$restaurants.restaurant_name</li>
+      <p> $restaurants.restaurant_descr,
+      $restaurants.restaurant_star_rating Stars,
+      Destination: $restaurants.destination,
+      $restaurants.cuisine_tags,
+      </p>
+      #end
+    </ul>
+  </nav>
+
+  <article>
+    <h1>Schedule list</h1>
+    <ul>
+    <li>listing things im adding</li>
+    <li>listing some activties</li>
+  </article>
+</section>
 
 
-  </body>
+</body>
 </html>
