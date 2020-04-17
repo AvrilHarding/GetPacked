@@ -7,5 +7,26 @@
   <body>
     <h1>Pick some activities and your restaurants! </h1>
 
+     <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col" style="font-size:20px; color:cornsilk">Previous post</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              #foreach( $restaurants in $restaurants )
+              <tr>
+                <th scope="row">
+                 $restaurants.restaurant_name
+                 $restaurants.restaurant_descr
+                 $restaurants.restaurant_star_rating
+                 $restaurants.destination
+                 $restaurants.cuisine_tags
+               #end
+            </tbody>
+          </table>
+
+
   </body>
 </html>

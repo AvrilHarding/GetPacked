@@ -69,8 +69,7 @@ public class Main {
             HashMap hotel = new HashMap();
             hotel.put("hotel", model.getAllHotels());
             hotel.put("trip_name", req.session().attribute("trip_name"));
-//            req.session().attribute("trip_name");
-System.out.println((String) req.session().attribute("trip_name"));
+            System.out.println((String) req.session().attribute("trip_name"));
             return new ModelAndView(hotel, "templates/pickhotel.vtl");
         }, new VelocityTemplateEngine());
 
@@ -103,10 +102,12 @@ System.out.println((String) req.session().attribute("trip_name"));
         get("/schedule", (req, res) -> {
 
 
-//            HashMap schedule = new HashMap();
+            model.getAllRestaurants();
+            HashMap restaurants = new HashMap();
+            restaurants.put("restaurants", model.getAllRestaurants());
 
 
-            return new ModelAndView(new HashMap(), "templates/schedule.vtl");
+            return new ModelAndView(restaurants, "templates/schedule.vtl");
         }, new VelocityTemplateEngine());
     }
 }
