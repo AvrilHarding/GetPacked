@@ -49,7 +49,8 @@ public class Main {
         post("/newtrip", (request, response) -> {
             String trip_name = request.queryParams("trip_name_1");
             String destination = request.queryParams("destination_1");
-            model.createTrip(trip_name, destination);
+            String hotel_name = null;
+            model.createTrip(trip_name, destination, hotel_name);
             request.session().attribute("trip_name", trip_name);
             response.redirect("/pickhotel");
             return null;
