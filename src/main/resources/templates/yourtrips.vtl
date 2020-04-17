@@ -7,5 +7,24 @@
   <body>
     <h1>Your trips!</h1>
 
+<table class="table table-hover">
+        <thead>
+          <tr>
+            <th scope="col" style="font-size:20px; color:cornsilk">Previous post</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          #foreach( $trips in $trips )
+          <tr>
+            <th scope="row">
+            Trip name: $trips.trip_name,
+            Destination: $trips.destination,
+           #end
+           </form>
+        </tbody>
+      </table>
+
+
   </body>
 </html>
