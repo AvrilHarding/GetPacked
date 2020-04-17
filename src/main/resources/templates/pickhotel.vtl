@@ -29,13 +29,13 @@
           #foreach( $hotel in $hotel )
           <tr>
             <th scope="row">
-            Hotel name: $hotel.hotel_name
-            Description: $hotel.hotel_descr
-            Room type: $hotel.room_name
-            Room occupancy: $hotel.room_occupancy_limit
-            Room Price Pp/Pn: $hotel.price_pppn
-            Star Rating: $hotel.hotel_star_rating
-            Destination: $hotel.destination
+            Hotel name: $hotel.hotel_name,
+            Description: $hotel.hotel_descr,
+            Room type: $hotel.room_name,
+            Room occupancy: $hotel.room_occupancy_limit,
+            Room Price Pp/Pn: $hotel.price_pppn,
+            Star Rating: $hotel.hotel_star_rating,
+            Destination: $hotel.destination,
             <form method="post" action="/pickhotel">
             <button type="submit" name="hotel_name" value=$hotel.hotel_name class="btn btn-primary" >Approve</button>
            #end

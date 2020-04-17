@@ -18,11 +18,11 @@
               #foreach( $restaurants in $restaurants )
               <tr>
                 <th scope="row">
-                 $restaurants.restaurant_name
-                 $restaurants.restaurant_descr
-                 $restaurants.restaurant_star_rating
-                 $restaurants.destination
-                 $restaurants.cuisine_tags
+                 Restaurant name:$restaurants.restaurant_name,
+                 Restaurant Description: $restaurants.restaurant_descr,
+                 Star Rating: $restaurants.restaurant_star_rating,
+                 Destination: $restaurants.destination,
+                 $restaurants.cuisine_tags,
                #end
             </tbody>
           </table>
