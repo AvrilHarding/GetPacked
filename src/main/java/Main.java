@@ -1,6 +1,5 @@
 import models.Model;
 import models.Sql2oModel;
-import org.apache.log4j.BasicConfigurator;
 import org.flywaydb.core.Flyway;
 import org.sql2o.Sql2o;
 import org.sql2o.converters.UUIDConverter;
@@ -51,11 +50,13 @@ public class Main {
             return new ModelAndView(new HashMap(), "templates/newtrip.vtl");
         }, new VelocityTemplateEngine());
 
+
         post("/newtrip", (request, response) -> {
 
             String trip_name = request.queryParams("trip_name_1");
             String destination = request.queryParams("destination_1");
             model.createTrip(trip_name, destination);
+            request.session().attribute("trip_name", trip_name);
 
             response.redirect("/pickhotel");
             return null;
@@ -67,8 +68,9 @@ public class Main {
             model.getAllHotels();
             HashMap hotel = new HashMap();
             hotel.put("hotel", model.getAllHotels());
-
-
+            hotel.put("trip_name", req.session().attribute("trip_name"));
+//            req.session().attribute("trip_name");
+System.out.println((String) req.session().attribute("trip_name"));
             return new ModelAndView(hotel, "templates/pickhotel.vtl");
         }, new VelocityTemplateEngine());
 
@@ -76,8 +78,11 @@ public class Main {
         post("/pickhotel", (request, response) -> {
 
             String hotel_name = request.queryParams("hotel_name");
-            UUID trip_id = UUID.fromString(request.queryParams("trip_id"));
-            model.addHotel(hotel_name, trip_id);
+            String trip_name = request.session().attribute("trip_name");
+            System.out.println(hotel_name);
+            System.out.println(trip_name);
+//            request.session().attribute(trip_name);
+            model.addHotel(hotel_name, trip_name);
 
             response.redirect("/schedule");
 

@@ -41,12 +41,13 @@ public class Sql2oModel implements Model {
         }
     }
 
+
     @Override
-    public void addHotel(String hotel_name, UUID trip_id) {
+    public void addHotel(String hotel_name, String trip_name) {
         try (Connection conn = sql2o.open()) {
-            conn.createQuery("update trips SET hotel_name = :hotel_name WHERE trip_id = trip_id")
+            conn.createQuery("update trips SET hotel_name = :hotel_name WHERE trip_name = :trip_name")
                     .addParameter("hotel_name", hotel_name)
-                    .addParameter("trip_id", trip_id)
+                    .addParameter("trip_name", trip_name)
                     .executeUpdate();
 
         }
