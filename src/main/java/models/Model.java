@@ -10,6 +10,9 @@ public interface Model {
     List getAllHotels();
     void addHotel(String hotel_name, String trip_name);
     List<Restaurants> getAllRestaurants();
+
+    List<Activities> getAllActivities();
+
 }
 
 

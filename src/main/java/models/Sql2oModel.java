@@ -63,4 +63,15 @@ public class Sql2oModel implements Model {
             return restaurants;
         }
     }
+
+    @Override
+    public List<Activities> getAllActivities() {
+        try (Connection conn = sql2o.open()) {
+
+            List<Activities> activities = conn.createQuery("select * from activities")
+
+                    .executeAndFetch(Activities.class);
+            return activities;
+        }
+    }
 }
