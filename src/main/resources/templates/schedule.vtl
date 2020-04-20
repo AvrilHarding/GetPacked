@@ -88,11 +88,15 @@ footer {
       $restaurants.restaurant_star_rating Stars,
       Destination: $restaurants.destination,
       $restaurants.cuisine_tags,
+
       </p>
+     </ul>
+<form method=post action="/schedule">
+      <button type="submit" name="restaurant_name" value=$restaurants.restaurant_name class="btn btn-primary" >Select</button>
+
+#end
 
 
-      #end
-    </ul>
       <h3>Activities</h3>
         #foreach( $activities in $activities )
         <li>$activities.activity_name <input type="checkbox"></li>
@@ -102,13 +106,24 @@ footer {
         </p>
         #end
         </ul>
+
+
+
   </nav>
+
+
 
   <article>
     <h1>Schedule list</h1>
-    <ul>
+
     <li>listing things im adding</li>
-    <li>listing some activties</li>
+    #foreach($schedule in $schedules)
+        <ul>
+        <li>$schedules.restaurant_name </li>
+        <li>$schedules.trip_name </li>
+        #end
+    <li>listing some activities</li>
+    </ul>
   </article>
 </section>
 

@@ -10,12 +10,14 @@ public interface Model {
     List getAllHotels();
     void addHotel(String hotel_name, String trip_name);
     List<Restaurants> getAllRestaurants();
-
-
     List<Activities> getAllActivities();
-
     List getAllTrips();
 
+    void createSchedule(String trip_name, String restaurant_name, String activity_name);
+
+    void addRestaurants(String restaurant_name, String trip_name);
+
+    List<Schedule> getSchedule();
 }
 
 
