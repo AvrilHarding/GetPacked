@@ -31,10 +31,13 @@
             Room Price Pp/Pn: $hotel.price_pppn,
             Star Rating: $hotel.hotel_star_rating,
             Destination: $hotel.destination,
+
             <form method="post" action="/pickhotel">
-            <button type="submit" name="hotel_name" value=$hotel.hotel_name class="btn btn-primary" >Approve</button>
-           #end
-           </form>
+            <input type="hidden" id="hotel_id" name="hotel_id"  value=$hotel.hotel_id>
+            <button type="submit" class="btn btn-primary" >Approve</button>
+            </form>
+            #end
+
         </tbody>
       </table>
 

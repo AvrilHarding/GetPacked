@@ -1,5 +1,5 @@
 create table restaurants (
- restaurant_id int,
+ restaurant_id serial,
  restaurant_name VARCHAR(60),
  restaurant_descr VARCHAR(280),
  restaurant_star_rating int,

@@ -1,5 +1,5 @@
 create table users (
-user_id VARCHAR,
+user_id UUID,
 first_name VARCHAR(60),
 last_name VARCHAR(60),
 username VARCHAR(60),

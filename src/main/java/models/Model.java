@@ -6,9 +6,11 @@ import java.util.UUID;
 
 public interface Model {
 
-    void createTrip(String trip_name, String destination);
+    UUID createTrip(String trip_name, String destination);
+
     List getAllHotels();
-    void addHotel(String hotel_name, String trip_name);
+    void addHotel(String trip_name, int hotel_id);
+
     List<Restaurants> getAllRestaurants();
     List<Activities> getAllActivities();
     List getAllTrips();

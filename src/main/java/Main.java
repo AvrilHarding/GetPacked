@@ -72,6 +72,7 @@ public class Main {
             String trip_name = request.queryParams("trip_name_1");
             String destination = request.queryParams("destination_1");
             String hotel_name = null;
+            String hotel_id = null;
             String restaurant_name = null;
             String activity_name = null;
             model.createTrip(trip_name, destination);
@@ -91,9 +92,9 @@ public class Main {
 
 
         post("/pickhotel", (request, response) -> {
-            String hotel_name = request.queryParams("hotel_name");
+            int hotel_id = Integer.parseInt(request.queryParams("hotel_id"));
             String trip_name = request.session().attribute("trip_name");
-            model.addHotel(hotel_name, trip_name);
+            model.addHotel(trip_name, hotel_id);
             response.redirect("/schedule");
             return null;
         });
@@ -107,6 +108,7 @@ public class Main {
 
 
         get("/schedule", (req, res) -> {
+            String trip_name = req.session().attribute("trip_name");
             HashMap restaurants_and_activities = new HashMap();
             restaurants_and_activities.put("restaurants", model.getAllRestaurants());
             restaurants_and_activities.put("activities", model.getAllActivities());
