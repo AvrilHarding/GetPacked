@@ -77,13 +77,37 @@ public class Sql2oModel implements Model {
     }
 
 
-    public List<Trip>getAllTrips() {
+    public List<Trip> getAllTrips() {
         try (Connection conn = sql2o.open()) {
 
             List<Trip> trips = conn.createQuery("select trip_name, destination, hotel_name from trips")
 
                     .executeAndFetch(Trip.class);
             return trips;
+        }
+    }
+
+    @Override
+    public void createSchedule(String trip_name, String restaurant_name, String activity_name) {
+        try (Connection conn = sql2o.beginTransaction()) {
+            conn.createQuery("insert into schedules(trip_name, restaurant_name, activity_name) VALUES (:trip_name, :restaurant_name, :activity_name)")
+
+                    .addParameter("trip_name", trip_name)
+                    .addParameter("restaurant_name", restaurant_name)
+                    .addParameter("activity_name", activity_name)
+                    .executeUpdate();
+            conn.commit();
+
+        }
+    }
+    @Override
+    public void addRestaurants(String restaurant_name, String trip_name) {
+        try (Connection conn = sql2o.open()) {
+            conn.createQuery("update schedules SET restaurant_name = :restaurant_name WHERE trip_name = :trip_name")
+                    .addParameter("restaurant_name", restaurant_name)
+                    .addParameter("trip_name", trip_name)
+                    .executeUpdate();
+
         }
     }
 }

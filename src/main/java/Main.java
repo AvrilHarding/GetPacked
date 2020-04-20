@@ -49,7 +49,10 @@ public class Main {
             String trip_name = request.queryParams("trip_name_1");
             String destination = request.queryParams("destination_1");
             String hotel_name = null;
+            String restaurant_name = null;
+            String activity_name = null;
             model.createTrip(trip_name, destination);
+            model.createSchedule(trip_name, restaurant_name, activity_name);
             request.session().attribute("trip_name", trip_name);
             response.redirect("/pickhotel");
             return null;
@@ -87,5 +90,13 @@ public class Main {
             return new ModelAndView(restaurants_and_activities,  "templates/schedule.vtl");
         }, new VelocityTemplateEngine());
 
+        post("/schedule", (request, response) -> {
+            HashMap restaurants_and_activities = new HashMap();
+            String restaurant_name = request.queryParams("restaurant_name");
+            String trip_name = request.session().attribute("trip_name");
+//            String activity_name = request.queryParams("activity_name");
+            model.addRestaurants(restaurant_name, trip_name);
+            return null;
+        });
     }
 }
