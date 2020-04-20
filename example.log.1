@@ -1,3 +1,4 @@
+
 DEBUG qtp210506565-19 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@75152643 waiting on select
 DEBUG qtp210506565-21 org.eclipse.jetty.http.HttpParser - HEADER:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9 --> FIELD
 DEBUG qtp210506565-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_NAME
@@ -46,7 +47,7 @@ DEBUG qtp210506565-21 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp
 DEBUG qtp210506565-21 org.eclipse.jetty.server.HttpInput - HttpInputOverHTTP@3a65cbbb[c=0,q=0,[0]=null,s=STREAM] addContent EOF
 DEBUG qtp210506565-21 org.eclipse.jetty.server.HttpConnection - HttpConnection@2903f2ef[p=HttpParser{s=END,0 of -1},g=HttpGenerator@33190889{s=START}]=>HttpChannelOverHttp@1355c277{r=4,c=false,a=IDLE,uri=//localhost:4567/pickhotel}<-SocketChannelEndPoint@17e6b0e4{/[0:0:0:0:0:0:0:1]:53064<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=14/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@2903f2ef[p=HttpParser{s=END,0 of -1},g=HttpGenerator@33190889{s=START}]=>HttpChannelOverHttp@1355c277{r=4,c=false,a=IDLE,uri=//localhost:4567/pickhotel} parsed true HttpParser{s=END,0 of -1}
 DEBUG qtp210506565-21 org.eclipse.jetty.server.HttpConnection - releaseRequestBuffer HttpConnection@2903f2ef[p=HttpParser{s=END,0 of -1},g=HttpGenerator@33190889{s=START}]=>HttpChannelOverHttp@1355c277{r=4,c=false,a=IDLE,uri=//localhost:4567/pickhotel}<-SocketChannelEndPoint@17e6b0e4{/[0:0:0:0:0:0:0:1]:53064<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=15/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@2903f2ef[p=HttpParser{s=END,0 of -1},g=HttpGenerator@33190889{s=START}]=>HttpChannelOverHttp@1355c277{r=4,c=false,a=IDLE,uri=//localhost:4567/pickhotel}
-DEBUG qtp210506565-21 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@1355c277{r=4,c=false,a=IDLE,uri=//localhost:4567/pickhotel} handle //localhost:4567/pickhotel 
+DEBUG qtp210506565-21 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@1355c277{r=4,c=false,a=IDLE,uri=//localhost:4567/pickhotel} handle //localhost:4567/pickhotel
 DEBUG qtp210506565-21 org.eclipse.jetty.server.HttpChannelState - handling HttpChannelState@2863940c{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false}
 DEBUG qtp210506565-21 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@1355c277{r=4,c=false,a=DISPATCHED,uri=//localhost:4567/pickhotel} action DISPATCH
 DEBUG qtp210506565-21 org.eclipse.jetty.server.Server - REQUEST GET /pickhotel on HttpChannelOverHttp@1355c277{r=4,c=false,a=DISPATCHED,uri=//localhost:4567/pickhotel}
@@ -124,7 +125,7 @@ DEBUG qtp210506565-19 org.eclipse.jetty.io.ManagedSelector - action=null wakeup=
 DEBUG qtp210506565-19 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@75152643 waiting on select
 DEBUG qtp210506565-19 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@75152643 woken up from select, 1/1 selected
 DEBUG qtp210506565-19 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@75152643 processing 1 keys, 0 actions
-DEBUG qtp210506565-19 org.eclipse.jetty.io.ManagedSelector - selected channel=java.nio.channels.SocketChannel[connected local=/[0:0:0:0:0:0:0:1]:4567 remote=/[0:0:0:0:0:0:0:1]:53064], selector=sun.nio.ch.KQueueSelectorImpl@75152643, interestOps=1, readyOps=1 SocketChannelEndPoint@17e6b0e4{/[0:0:0:0:0:0:0:1]:53064<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=1435/3600000}{io=1/1,kio=1,kro=1}->HttpConnection@2903f2ef[p=HttpParser{s=START,0 of -1},g=HttpGenerator@33190889{s=START}]=>HttpChannelOverHttp@1355c277{r=4,c=false,a=IDLE,uri=null} 
+DEBUG qtp210506565-19 org.eclipse.jetty.io.ManagedSelector - selected channel=java.nio.channels.SocketChannel[connected local=/[0:0:0:0:0:0:0:1]:4567 remote=/[0:0:0:0:0:0:0:1]:53064], selector=sun.nio.ch.KQueueSelectorImpl@75152643, interestOps=1, readyOps=1 SocketChannelEndPoint@17e6b0e4{/[0:0:0:0:0:0:0:1]:53064<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=1435/3600000}{io=1/1,kio=1,kro=1}->HttpConnection@2903f2ef[p=HttpParser{s=START,0 of -1},g=HttpGenerator@33190889{s=START}]=>HttpChannelOverHttp@1355c277{r=4,c=false,a=IDLE,uri=null}
 DEBUG qtp210506565-19 org.eclipse.jetty.io.ChannelEndPoint - onSelected 1->0 r=true w=false for SocketChannelEndPoint@17e6b0e4{/[0:0:0:0:0:0:0:1]:53064<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=1436/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@2903f2ef[p=HttpParser{s=START,0 of -1},g=HttpGenerator@33190889{s=START}]=>HttpChannelOverHttp@1355c277{r=4,c=false,a=IDLE,uri=null}
 DEBUG qtp210506565-19 org.eclipse.jetty.io.ChannelEndPoint - task CEP:SocketChannelEndPoint@17e6b0e4{/[0:0:0:0:0:0:0:1]:53064<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=1436/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@2903f2ef[p=HttpParser{s=START,0 of -1},g=HttpGenerator@33190889{s=START}]=>HttpChannelOverHttp@1355c277{r=4,c=false,a=IDLE,uri=null}:runFillable:BLOCKING
 DEBUG qtp210506565-19 org.eclipse.jetty.util.thread.strategy.EatWhatYouKill - EatWhatYouKill@4448be34/SelectorProducer@36af3f8f/PRODUCING/ReservedThreadExecutor@364eb75c{s=2/4,p=0}@SelectorManager@ServerConnector@6f8b6025{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} t=CEP:SocketChannelEndPoint@17e6b0e4{/[0:0:0:0:0:0:0:1]:53064<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=1437/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@2903f2ef[p=HttpParser{s=START,0 of -1},g=HttpGenerator@33190889{s=START}]=>HttpChannelOverHttp@1355c277{r=4,c=false,a=IDLE,uri=null}:runFillable:BLOCKING/BLOCKING
@@ -218,7 +219,7 @@ Cookie: JSESSIONID=node0caacki3w4xo41w2o3r66zpm5k0.node0
 
 
 DEBUG qtp210506565-19 org.eclipse.jetty.server.HttpConnection - HttpConnection@2903f2ef[p=HttpParser{s=CONTENT,0 of 20},g=HttpGenerator@33190889{s=START}]=>HttpChannelOverHttp@1355c277{r=5,c=false,a=IDLE,uri=//localhost:4567/pickhotel}<-SocketChannelEndPoint@17e6b0e4{/[0:0:0:0:0:0:0:1]:53064<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=19/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@2903f2ef[p=HttpParser{s=CONTENT,0 of 20},g=HttpGenerator@33190889{s=START}]=>HttpChannelOverHttp@1355c277{r=5,c=false,a=IDLE,uri=//localhost:4567/pickhotel} parsed true HttpParser{s=CONTENT,0 of 20}
-DEBUG qtp210506565-19 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@1355c277{r=5,c=false,a=IDLE,uri=//localhost:4567/pickhotel} handle //localhost:4567/pickhotel 
+DEBUG qtp210506565-19 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@1355c277{r=5,c=false,a=IDLE,uri=//localhost:4567/pickhotel} handle //localhost:4567/pickhotel
 DEBUG qtp210506565-19 org.eclipse.jetty.server.HttpChannelState - handling HttpChannelState@2863940c{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false}
 DEBUG qtp210506565-19 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@1355c277{r=5,c=false,a=DISPATCHED,uri=//localhost:4567/pickhotel} action DISPATCH
 DEBUG qtp210506565-19 org.eclipse.jetty.server.Server - REQUEST POST /pickhotel on HttpChannelOverHttp@1355c277{r=5,c=false,a=DISPATCHED,uri=//localhost:4567/pickhotel}
@@ -317,7 +318,7 @@ DEBUG qtp210506565-21 org.eclipse.jetty.io.ManagedSelector - action=null wakeup=
 DEBUG qtp210506565-21 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@75152643 waiting on select
 DEBUG qtp210506565-21 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@75152643 woken up from select, 1/1 selected
 DEBUG qtp210506565-21 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@75152643 processing 1 keys, 0 actions
-DEBUG qtp210506565-21 org.eclipse.jetty.io.ManagedSelector - selected channel=java.nio.channels.SocketChannel[connected local=/[0:0:0:0:0:0:0:1]:4567 remote=/[0:0:0:0:0:0:0:1]:53064], selector=sun.nio.ch.KQueueSelectorImpl@75152643, interestOps=1, readyOps=1 SocketChannelEndPoint@17e6b0e4{/[0:0:0:0:0:0:0:1]:53064<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=6/3600000}{io=1/1,kio=1,kro=1}->HttpConnection@2903f2ef[p=HttpParser{s=START,0 of -1},g=HttpGenerator@33190889{s=START}]=>HttpChannelOverHttp@1355c277{r=5,c=false,a=IDLE,uri=null} 
+DEBUG qtp210506565-21 org.eclipse.jetty.io.ManagedSelector - selected channel=java.nio.channels.SocketChannel[connected local=/[0:0:0:0:0:0:0:1]:4567 remote=/[0:0:0:0:0:0:0:1]:53064], selector=sun.nio.ch.KQueueSelectorImpl@75152643, interestOps=1, readyOps=1 SocketChannelEndPoint@17e6b0e4{/[0:0:0:0:0:0:0:1]:53064<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=6/3600000}{io=1/1,kio=1,kro=1}->HttpConnection@2903f2ef[p=HttpParser{s=START,0 of -1},g=HttpGenerator@33190889{s=START}]=>HttpChannelOverHttp@1355c277{r=5,c=false,a=IDLE,uri=null}
 DEBUG qtp210506565-21 org.eclipse.jetty.io.ChannelEndPoint - onSelected 1->0 r=true w=false for SocketChannelEndPoint@17e6b0e4{/[0:0:0:0:0:0:0:1]:53064<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=6/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@2903f2ef[p=HttpParser{s=START,0 of -1},g=HttpGenerator@33190889{s=START}]=>HttpChannelOverHttp@1355c277{r=5,c=false,a=IDLE,uri=null}
 DEBUG qtp210506565-21 org.eclipse.jetty.io.ChannelEndPoint - task CEP:SocketChannelEndPoint@17e6b0e4{/[0:0:0:0:0:0:0:1]:53064<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=7/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@2903f2ef[p=HttpParser{s=START,0 of -1},g=HttpGenerator@33190889{s=START}]=>HttpChannelOverHttp@1355c277{r=5,c=false,a=IDLE,uri=null}:runFillable:BLOCKING
 DEBUG qtp210506565-21 org.eclipse.jetty.util.thread.strategy.EatWhatYouKill - EatWhatYouKill@4448be34/SelectorProducer@36af3f8f/PRODUCING/ReservedThreadExecutor@364eb75c{s=2/4,p=0}@SelectorManager@ServerConnector@6f8b6025{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} t=CEP:SocketChannelEndPoint@17e6b0e4{/[0:0:0:0:0:0:0:1]:53064<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=7/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@2903f2ef[p=HttpParser{s=START,0 of -1},g=HttpGenerator@33190889{s=START}]=>HttpChannelOverHttp@1355c277{r=5,c=false,a=IDLE,uri=null}:runFillable:BLOCKING/BLOCKING
@@ -383,9 +384,9 @@ DEBUG qtp210506565-21 org.eclipse.jetty.http.HttpParser - HEADER:Cookie: JSESSIO
 DEBUG qtp210506565-21 org.eclipse.jetty.http.HttpParser - HEADER --> END
 DEBUG qtp210506565-21 org.eclipse.jetty.server.HttpChannel - REQUEST for //localhost:4567/schedule on HttpChannelOverHttp@1355c277{r=6,c=false,a=IDLE,uri=//localhost:4567/schedule}
 GET //localhost:4567/schedule HTTP/1.1
+
 Host: localhost:4567
 Connection: keep-alive
-Cache-Control: max-age=0
 Upgrade-Insecure-Requests: 1
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
 Sec-Fetch-Dest: document
@@ -393,6 +394,7 @@ Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/a
 Sec-Fetch-Site: same-origin
 Sec-Fetch-Mode: navigate
 Sec-Fetch-User: ?1
+
 Referer: http://localhost:4567/pickhotel
 Accept-Encoding: gzip, deflate, br
 Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
@@ -404,7 +406,7 @@ DEBUG qtp210506565-21 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp
 DEBUG qtp210506565-21 org.eclipse.jetty.server.HttpInput - HttpInputOverHTTP@3a65cbbb[c=0,q=0,[0]=null,s=STREAM] addContent EOF
 DEBUG qtp210506565-21 org.eclipse.jetty.server.HttpConnection - HttpConnection@2903f2ef[p=HttpParser{s=END,0 of -1},g=HttpGenerator@33190889{s=START}]=>HttpChannelOverHttp@1355c277{r=6,c=false,a=IDLE,uri=//localhost:4567/schedule}<-SocketChannelEndPoint@17e6b0e4{/[0:0:0:0:0:0:0:1]:53064<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=7/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@2903f2ef[p=HttpParser{s=END,0 of -1},g=HttpGenerator@33190889{s=START}]=>HttpChannelOverHttp@1355c277{r=6,c=false,a=IDLE,uri=//localhost:4567/schedule} parsed true HttpParser{s=END,0 of -1}
 DEBUG qtp210506565-21 org.eclipse.jetty.server.HttpConnection - releaseRequestBuffer HttpConnection@2903f2ef[p=HttpParser{s=END,0 of -1},g=HttpGenerator@33190889{s=START}]=>HttpChannelOverHttp@1355c277{r=6,c=false,a=IDLE,uri=//localhost:4567/schedule}<-SocketChannelEndPoint@17e6b0e4{/[0:0:0:0:0:0:0:1]:53064<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=7/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@2903f2ef[p=HttpParser{s=END,0 of -1},g=HttpGenerator@33190889{s=START}]=>HttpChannelOverHttp@1355c277{r=6,c=false,a=IDLE,uri=//localhost:4567/schedule}
-DEBUG qtp210506565-21 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@1355c277{r=6,c=false,a=IDLE,uri=//localhost:4567/schedule} handle //localhost:4567/schedule 
+DEBUG qtp210506565-21 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@1355c277{r=6,c=false,a=IDLE,uri=//localhost:4567/schedule} handle //localhost:4567/schedule
 DEBUG qtp210506565-21 org.eclipse.jetty.server.HttpChannelState - handling HttpChannelState@2863940c{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false}
 DEBUG qtp210506565-21 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@1355c277{r=6,c=false,a=DISPATCHED,uri=//localhost:4567/schedule} action DISPATCH
 DEBUG qtp210506565-21 org.eclipse.jetty.server.Server - REQUEST GET /schedule on HttpChannelOverHttp@1355c277{r=6,c=false,a=DISPATCHED,uri=//localhost:4567/schedule}
@@ -483,7 +485,7 @@ DEBUG qtp210506565-19 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch
 DEBUG qtp210506565-16 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@50dda046 woken up from select, 1/1 selected
 DEBUG qtp210506565-16 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@50dda046 processing 1 keys, 0 actions
 DEBUG qtp210506565-18-acceptor-0@6a4d15f5-ServerConnector@6f8b6025{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} org.eclipse.jetty.io.ManagedSelector - Queued change org.eclipse.jetty.io.ManagedSelector$Accept@2ec6d820 on org.eclipse.jetty.io.ManagedSelector@a169bac id=1 keys=1 selected=0 actions=0
-DEBUG qtp210506565-16 org.eclipse.jetty.io.ManagedSelector - selected channel=java.nio.channels.SocketChannel[connected local=/[0:0:0:0:0:0:0:1]:4567 remote=/[0:0:0:0:0:0:0:1]:53065], selector=sun.nio.ch.KQueueSelectorImpl@50dda046, interestOps=1, readyOps=1 SocketChannelEndPoint@1987f2ef{/[0:0:0:0:0:0:0:1]:53065<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=10125/3600000}{io=1/1,kio=1,kro=1}->HttpConnection@5e8f2da3[p=HttpParser{s=START,0 of -1},g=HttpGenerator@42c87dd6{s=START}]=>HttpChannelOverHttp@4ac8eca5{r=0,c=false,a=IDLE,uri=null} 
+DEBUG qtp210506565-16 org.eclipse.jetty.io.ManagedSelector - selected channel=java.nio.channels.SocketChannel[connected local=/[0:0:0:0:0:0:0:1]:4567 remote=/[0:0:0:0:0:0:0:1]:53065], selector=sun.nio.ch.KQueueSelectorImpl@50dda046, interestOps=1, readyOps=1 SocketChannelEndPoint@1987f2ef{/[0:0:0:0:0:0:0:1]:53065<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=10125/3600000}{io=1/1,kio=1,kro=1}->HttpConnection@5e8f2da3[p=HttpParser{s=START,0 of -1},g=HttpGenerator@42c87dd6{s=START}]=>HttpChannelOverHttp@4ac8eca5{r=0,c=false,a=IDLE,uri=null}
 DEBUG qtp210506565-19 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@75152643 woken up from select, 0/1 selected
 DEBUG qtp210506565-19 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@75152643 processing 0 keys, 1 actions
 DEBUG qtp210506565-19 org.eclipse.jetty.io.ManagedSelector - action=org.eclipse.jetty.io.ManagedSelector$Accept@2ec6d820 wakeup=false

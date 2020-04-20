@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GetPacked!</title>
+     <link rel="stylesheet"
+              href="https://fonts.googleapis.com/css?family=Helvetica">
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">Get Packed</a>
+        </div>
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="/login">Log in</a></li>
+        </ul>
+      </div>
+    </nav>
+
+ <style>
+        .title-font {
+        font-family: 'Helvetica', sans-serif;
+        font-size: 48px;
+      }
+
+      body {
+        background-image: url("");
+        background: linear-gradient(to right,#d4cfe8,#a593ed);
+        text-align: center;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+       .buttons {
+            text-align: center;
+        }
+
+        .navbar {
+         opacity: 0.6;
+        }
+
+    </style>
+  </head>
+
+
+    <body>
+    <h1></h1>
+<p>Login below with your account details</p>
+<form method="post" action="/login">
+  <label for="username">User name:</label><br>
+    <input type="text" id="username" name="username"><br>
+      <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password"><br><br>
+  <input type="submit" value="Submit">
+</form>
+
+
+
+
+  </body>
+</html>
