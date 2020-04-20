@@ -278,3 +278,7 @@
 2020-04-20 11:42:09,632 - ResourceManager : found templates/schedule.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
 2020-04-20 11:42:09,632 - ResourceManager : found templates/schedule.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
 2020-04-20 11:42:09,632 - ResourceManager : found templates/schedule.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-04-20 12:03:02,435 - ResourceManager : found templates/pickhotel.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-04-20 12:03:02,435 - ResourceManager : found templates/pickhotel.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-04-20 12:03:02,435 - ResourceManager : found templates/pickhotel.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
+2020-04-20 12:03:02,435 - ResourceManager : found templates/pickhotel.vtl with loader org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader
