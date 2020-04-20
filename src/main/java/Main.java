@@ -91,13 +91,19 @@ public class Main {
         }, new VelocityTemplateEngine());
 
         post("/schedule", (request, response) -> {
-            HashMap restaurants_and_activities = new HashMap();
+//            HashMap schedules = new HashMap();
             String restaurant_name = request.queryParams("restaurant_name");
+            System.out.println(restaurant_name);
             String trip_name = request.session().attribute("trip_name");
+            System.out.println(trip_name);
 //            String activity_name = request.queryParams("activity_name");
             model.addRestaurants(restaurant_name, trip_name);
+            System.out.println(restaurant_name);
             response.redirect("/schedule");
             return null;
         });
+
+
+
     }
 }

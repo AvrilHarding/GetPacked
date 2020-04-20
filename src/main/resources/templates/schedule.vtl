@@ -115,9 +115,15 @@ footer {
 
   <article>
     <h1>Schedule list</h1>
-    <ul>
+
     <li>listing things im adding</li>
-    <li>listing some activties</li>
+    #foreach($schedule in $schedules)
+        <ul>
+        <li>$schedules.restaurant_name </li>
+        <li>$schedules.trip_name </li>
+        #end
+    <li>listing some activities</li>
+    </ul>
   </article>
 </section>
 
