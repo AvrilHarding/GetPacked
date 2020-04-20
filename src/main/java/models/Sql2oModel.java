@@ -27,7 +27,6 @@ public class Sql2oModel implements Model {
             conn.commit();
 
         }
-
     }
 
     @Override
@@ -84,6 +83,22 @@ public class Sql2oModel implements Model {
 
                     .executeAndFetch(Trip.class);
             return trips;
+        }
+    }
+
+    @Override
+    public void addUser(String first_name, String last_name, String username, String email_address, String password) {
+        try (Connection conn = sql2o.open()) {
+            UUID userUuid = UUID.randomUUID();
+            conn.createQuery("insert into users(user_id, first_name, last_name, username, email_address, password) VALUES (:user_id, :first_name, :last_name, :username, :email_address, :password)")
+                    .addParameter("user_id", userUuid)
+                    .addParameter("first_name", first_name)
+                    .addParameter("last_name", last_name)
+                    .addParameter("username", username)
+                    .addParameter("email_address", email_address)
+                    .addParameter("password", password)
+                    .executeUpdate();
+
         }
     }
 }

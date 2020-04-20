@@ -33,6 +33,29 @@ public class Main {
         Model model = new Sql2oModel(sql2o);
 
 
+        get("/", (req, res) -> {
+//            HashMap dashboard = new HashMap();
+            return new ModelAndView(new HashMap(), "templates/homepage.vtl");
+        }, new VelocityTemplateEngine());
+
+        post("/", (request, response) -> {
+            String first_name = request.queryParams("first_name");
+            String last_name = request.queryParams("last_name");
+            String username = request.queryParams("username");
+            String email_address = request.queryParams("email_address");
+            String password = request.queryParams("password");
+            model.addUser(first_name, last_name, username, email_address, password);
+            response.redirect("/login");
+            return null;
+        });
+
+        get("/login", (req, res) -> {
+//            HashMap dashboard = new HashMap();
+            return new ModelAndView(new HashMap(), "templates/login.vtl");
+        }, new VelocityTemplateEngine());
+
+
+
         get("/dashboard", (req, res) -> {
 //            HashMap dashboard = new HashMap();
             return new ModelAndView(new HashMap(), "templates/dashboard.vtl");
