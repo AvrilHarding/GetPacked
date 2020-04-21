@@ -24,4 +24,5 @@ public interface Model {
 
     void addUser(String first_name, String last_name, String username, String email_address, String password);
 
+    void loginUser(String username);
 }

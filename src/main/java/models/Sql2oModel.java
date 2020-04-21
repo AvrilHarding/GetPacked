@@ -108,7 +108,6 @@ public class Sql2oModel implements Model {
                     .addParameter("restaurant_name", restaurant_name)
                     .addParameter("trip_name", trip_name)
                     .executeUpdate();
-
         }
     }
 
@@ -139,5 +138,14 @@ public class Sql2oModel implements Model {
         }
     }
 
+    @Override
+    public void loginUser(String username) {
+        try (Connection conn = sql2o.open()) {
+            conn.createQuery("insert into trips(username) VALUES (:username)")
+                    .addParameter("username", username)
+                    .executeUpdate();
+
+        }
+    }
 
 }
