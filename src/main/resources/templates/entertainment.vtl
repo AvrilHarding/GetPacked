@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 
 <html lang="en">
@@ -89,15 +88,17 @@ footer {
       $restaurants.restaurant_star_rating Stars,
       Destination: $restaurants.destination,
       $restaurants.cuisine_tags,
+
       </p>
      </ul>
-    <form method=post action="/schedule">
-    <button type="submit" name="restaurant_name" value=$restaurants.restaurant_name class="btn btn-primary" >Select</button>
-    #end
+<form method=post action="/schedule">
+      <button type="submit" name="restaurant_name" value=$restaurants.restaurant_name class="btn btn-primary" >Select</button>
+
+#end
 
 
-    <h3>Activities</h3>
-    #foreach( $activities in $activities )
+      <h3>Activities</h3>
+        #foreach( $activities in $activities )
         <li>$activities.activity_name <input type="checkbox"></li>
         <p> $activities.activity_descr,
         Destination: $activities.destination,
@@ -105,16 +106,21 @@ footer {
         </p>
         #end
         </ul>
+
+
   </nav>
-
-
 
   <article>
     <h1>Schedule list</h1>
-    #foreach( $schedules in $schedule )
+
+    <li>listing things im adding</li>
+    #foreach( $schedules in $schedules )
+        <ul>
         <li>$schedules.restaurant_name </li>
         <li>$schedules.trip_name </li>
         #end
+    <li>listing some activities</li>
+    </ul>
   </article>
 </section>
 
@@ -122,4 +128,3 @@ footer {
 </body>
 
 </html>
-
