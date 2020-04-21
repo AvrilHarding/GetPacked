@@ -55,9 +55,12 @@ public class Main {
         }, new VelocityTemplateEngine());
 
 
-//        post("/login", (request, response) -> {
-//
-//        });
+        post("/login", (request, response) -> {
+            String username = request.queryParams("username");
+            model.loginUser(username);
+            response.redirect("/dashboard");
+            return null;
+        });
 
 
         get("/dashboard", (req, res) -> {
