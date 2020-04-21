@@ -55,6 +55,10 @@ public class Main {
         }, new VelocityTemplateEngine());
 
 
+//        post("/login", (request, response) -> {
+//
+//        });
+
 
         get("/dashboard", (req, res) -> {
 //            HashMap dashboard = new HashMap();
@@ -125,8 +129,6 @@ public class Main {
             response.redirect("/schedule");
             return null;
         });
-
-
-
+        
     }
 }
