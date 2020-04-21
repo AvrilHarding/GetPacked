@@ -11,8 +11,8 @@ public interface Model {
     List<Hotel> getAllHotels(String destination);
 
     void addHotel(String hotel_name, String trip_name);
-    List<Restaurants> getAllRestaurants();
-    List<Activities> getAllActivities();
+    List<Restaurants> getAllRestaurants(String destination);
+    List<Activities> getAllActivities(String destination);
     List getAllTrips();
 
 

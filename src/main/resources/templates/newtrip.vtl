@@ -19,7 +19,7 @@
 
     <form method="post" action="/newtrip">
       <label for="trip_name">Name your trip!</label><br>
-      <input type="text" id="trip_name_1" name="trip_name_1"><br>
+      <input type="text" id="trip_name_1" name="trip_name_1" required pattern="^\S+$"><br>
        <label for="destination">Pick a destination!</label>
         <select id="destination" name="destination">
           <option value="NYC">NYC</option>
