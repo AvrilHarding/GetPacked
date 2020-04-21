@@ -1,5 +1,5 @@
 create table hotels (
- hotel_id SERIAL,
+ hotel_id int,
  hotel_name VARCHAR(60),
  hotel_descr VARCHAR(280),
  room_name VARCHAR(60),
