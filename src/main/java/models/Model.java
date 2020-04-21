@@ -18,6 +18,8 @@ public interface Model {
 
     void addRestaurants(String restaurant_name, String trip_name);
 
+    void addActivities(String activity_name, String trip_name);
+
     List<Schedules> getSchedule();
 
     void addUser(String first_name, String last_name, String username, String email_address, String password);

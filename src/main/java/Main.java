@@ -123,6 +123,7 @@ public class Main {
             String trip_name = request.session().attribute("trip_name");
             String activity_name = request.queryParams("activity_name");
             model.addRestaurants(restaurant_name, trip_name);
+            model.addActivities(activity_name, trip_name);
             response.redirect("/schedule");
             return null;
         });

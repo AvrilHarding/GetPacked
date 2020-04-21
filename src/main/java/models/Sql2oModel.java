@@ -112,6 +112,15 @@ public class Sql2oModel implements Model {
         }
     }
 
+    public void addActivities(String activity_name, String trip_name) {
+        try (Connection conn = sql2o.open()) {
+            conn.createQuery("update schedules SET activity_name = :activity_name WHERE trip_name = :trip_name")
+                    .addParameter("activity_name", activity_name)
+                    .addParameter("trip_name", trip_name)
+                    .executeUpdate();
+        }
+    }
+
     public void addUser(String first_name, String last_name, String username, String email_address, String password) {
         try (Connection conn = sql2o.open()) {
             UUID userUuid = UUID.randomUUID();
