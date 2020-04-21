@@ -118,8 +118,8 @@ public class Main {
 
         get("/entertainment", (req, res) -> {
             HashMap restaurants_and_activities = new HashMap();
-            restaurants_and_activities.put("restaurants", model.getAllRestaurants());
-            restaurants_and_activities.put("activities", model.getAllActivities());
+            restaurants_and_activities.put("restaurants", model.getAllRestaurants(req.session().attribute("destination")));
+            restaurants_and_activities.put("activities", model.getAllActivities(req.session().attribute("destination")));
             restaurants_and_activities.put("schedules", model.getSchedule());
             return new ModelAndView(restaurants_and_activities,  "templates/entertainment.vtl");
         }, new VelocityTemplateEngine());
