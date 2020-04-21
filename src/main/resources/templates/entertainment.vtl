@@ -87,26 +87,25 @@ footer {
        <input type="checkbox" name="restaurant_name" value=$restaurants.restaurant_name>
        <label for="restaurant_name"> $restaurants.restaurant_name</label><br>
         <p> $restaurants.restaurant_descr,
-             $restaurants.restaurant_star_rating Stars,
-             Destination: $restaurants.destination,
-             $restaurants.cuisine_tags,
-             #end
+        $restaurants.restaurant_star_rating Stars,
+        Destination: $restaurants.destination,
+        $restaurants.cuisine_tags,
        </p>
+       #end
+       <h3>Activities</h3>
+        #foreach( $activities in $activities )
+        <input type="checkbox" name="activity_name" value=$activities.activity_name>
+        <label for="activity_name"> $activities.activity_name</label><br>
+        <p> $activities.activity_descr,
+         Destination: $activities.destination,
+         $activities.activity_tags,
+         </p>
+         #end
        <input type="submit" value="Submit">
      </form>
 
 
-     <h3>Activities</h3>
-        #foreach( $activities in $activities )
-        <li>$activities.activity_name <input type="checkbox">  </li>
-        <p> $activities.activity_descr,
-        Destination: $activities.destination,
-        $activities.activity_tags,
-        </p>
-        #end
-        <form method=post action="/entertainment">
-        <button type="submit" name="activity_name" value=$activities.activity_name class="btn btn-primary" >Select</button>
-        </ul>
+
 
 
 
