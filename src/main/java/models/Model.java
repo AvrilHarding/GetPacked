@@ -6,7 +6,7 @@ import java.util.UUID;
 
 public interface Model {
 
-    void createTrip(String trip_name, String destination);
+    void createTrip(String trip_name, String destination, String username);
 
     List<Hotel> getAllHotels(String destination);
 
@@ -24,5 +24,5 @@ public interface Model {
 
     void addUser(String first_name, String last_name, String username, String email_address, String password);
 
-    void loginUser(String username);
+//    void loginUser(String username);
 }

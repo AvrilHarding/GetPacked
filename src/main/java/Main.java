@@ -57,7 +57,7 @@ public class Main {
 
         post("/login", (request, response) -> {
             String username = request.queryParams("username");
-            model.loginUser(username);
+            request.session().attribute("username", username);
             response.redirect("/dashboard");
             return null;
         });
@@ -65,12 +65,14 @@ public class Main {
 
         get("/dashboard", (req, res) -> {
 //            HashMap dashboard = new HashMap();
+            String username = req.session().attribute("username");
             return new ModelAndView(new HashMap(), "templates/dashboard.vtl");
         }, new VelocityTemplateEngine());
 
 
         get("/newtrip", (req, res) -> {
 //            HashMap trip = new HashMap();
+            String username =  req.session().attribute("username");
             return new ModelAndView(new HashMap(), "templates/newtrip.vtl");
         }, new VelocityTemplateEngine());
 
@@ -78,10 +80,11 @@ public class Main {
         post("/newtrip", (request, response) -> {
             String trip_name = request.queryParams("trip_name_1");
             String destination = request.queryParams("destination");
+            String username = request.session().attribute("username");
             String hotel_name = null;
             String restaurant_name = null;
             String activity_name = null;
-            model.createTrip(trip_name, destination);
+            model.createTrip(trip_name, destination, username);
             model.createSchedule(trip_name, restaurant_name, activity_name);
             request.session().attribute("trip_name", trip_name);
             request.session().attribute("destination", destination);
