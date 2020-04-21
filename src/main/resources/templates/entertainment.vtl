@@ -81,37 +81,31 @@ footer {
 <section>
   <nav>
   <h3>Restaurants</h3>
-    <ul>
-    #foreach( $restaurants in $restaurants )
-      <li>$restaurants.restaurant_name <input type="checkbox"> </li>
-      <p> $restaurants.restaurant_descr,
-      $restaurants.restaurant_star_rating Stars,
-      Destination: $restaurants.destination,
-      $restaurants.cuisine_tags,
+
+     <form action="/entertainment" method="post">
+       #foreach( $restaurants in $restaurants )
+       <input type="checkbox" name="restaurant_name" value=$restaurants.restaurant_name>
+       <label for="restaurant_name"> $restaurants.restaurant_name</label><br>
+        <p> $restaurants.restaurant_descr,
+             $restaurants.restaurant_star_rating Stars,
+             Destination: $restaurants.destination,
+             $restaurants.cuisine_tags,
+             #end
+       </p>
+       <input type="submit" value="Submit">
+     </form>
 
 
-      <form method=post action="/entertainment">
-            <button type="submit" name="restaurant_name" value=$restaurants.restaurant_name class="btn btn-primary" >Select</button>
-
-      #end
-
-      </p>
-     </ul>
-
-
-
-
-
-      <h3>Activities</h3>
+     <h3>Activities</h3>
         #foreach( $activities in $activities )
         <li>$activities.activity_name <input type="checkbox">  </li>
         <p> $activities.activity_descr,
         Destination: $activities.destination,
         $activities.activity_tags,
         </p>
-        <form method=post action="/entertainment">
-              <button type="submit" name="activity_name" value=$activities.activity_name class="btn btn-primary" >Select</button>
         #end
+        <form method=post action="/entertainment">
+        <button type="submit" name="activity_name" value=$activities.activity_name class="btn btn-primary" >Select</button>
         </ul>
 
 
