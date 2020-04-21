@@ -129,12 +129,12 @@ public class Sql2oModel implements Model {
 
 
     @Override
-    public List<Schedule> getSchedule() {
+    public List<Schedules> getSchedule() {
         try (Connection conn = sql2o.open()) {
 
-            List<Schedule> schedule = conn.createQuery("select trip_name, restaurant_name from schedules")
+            List<Schedules> schedule = conn.createQuery("select trip_name, restaurant_name, activity_name from schedules")
 
-                    .executeAndFetch(Schedule.class);
+                    .executeAndFetch(Schedules.class);
             return schedule;
         }
     }
