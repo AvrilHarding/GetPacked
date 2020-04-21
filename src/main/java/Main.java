@@ -55,6 +55,10 @@ public class Main {
         }, new VelocityTemplateEngine());
 
 
+//        post("/login", (request, response) -> {
+//
+//        });
+
 
         get("/dashboard", (req, res) -> {
 //            HashMap dashboard = new HashMap();
@@ -123,12 +127,14 @@ public class Main {
             return null;
         });
 
+
         get("/schedule", (req, res) -> {
             model.getSchedule();
             HashMap schedules = new HashMap();
             schedules.put("schedules", model.getSchedule());
             return new ModelAndView(schedules, "templates/schedule.vtl");
         }, new VelocityTemplateEngine());
+        
 
     }
 }
