@@ -30,11 +30,11 @@ public class Sql2oModel implements Model {
     }
 
     @Override
-    public List<Hotel> getAllHotels() {
+    public List<Hotel> getAllHotels(String destination) {
         try (Connection conn = sql2o.open()) {
 
-            List<Hotel> hotel = conn.createQuery("select * from hotels")
-
+            List<Hotel> hotel = conn.createQuery("select * from hotels where destination = :destination")
+            .addParameter("destination", destination)
                     .executeAndFetch(Hotel.class);
             return hotel;
         }
