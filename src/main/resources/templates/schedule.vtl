@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>GetPacked!</title>
+    <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
+  </head>
+  <body>
+
+ <article>
+    <h1>Schedule list</h1>
+
+    <li>listing things im adding</li>
+    #foreach( $schedules in $schedules )
+        <ul>
+        <li>$schedules.restaurant_name </li>
+        <li>$schedules.activity_name </li>
+        <li>$schedules.trip_name </li>
+        #end
+    <li>listing some activities</li>
+    </ul>
+  </article>
+
+
+
+  </body>
+</html>

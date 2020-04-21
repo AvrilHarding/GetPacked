@@ -91,7 +91,7 @@ footer {
 
       </p>
      </ul>
-<form method=post action="/schedule">
+<form method=post action="/entertainment">
       <button type="submit" name="restaurant_name" value=$restaurants.restaurant_name class="btn btn-primary" >Select</button>
 
 #end
@@ -104,24 +104,16 @@ footer {
         Destination: $activities.destination,
         $activities.activity_tags,
         </p>
+        <form method=post action="/entertainment">
+              <button type="submit" name="activity_name" value=$activities.activity_name class="btn btn-primary" >Select</button>
         #end
         </ul>
 
 
+
   </nav>
 
-  <article>
-    <h1>Schedule list</h1>
 
-    <li>listing things im adding</li>
-    #foreach( $schedules in $schedules )
-        <ul>
-        <li>$schedules.restaurant_name </li>
-        <li>$schedules.trip_name </li>
-        #end
-    <li>listing some activities</li>
-    </ul>
-  </article>
 </section>
 
 

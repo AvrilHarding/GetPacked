@@ -94,7 +94,7 @@ public class Main {
             String hotel_name = request.queryParams("hotel_name");
             String trip_name = request.session().attribute("trip_name");
             model.addHotel(hotel_name, trip_name);
-            response.redirect("/schedule");
+            response.redirect("/entertainment");
             return null;
         });
 
@@ -106,27 +106,29 @@ public class Main {
         }, new VelocityTemplateEngine());
 
 
-        get("/schedule", (req, res) -> {
+        get("/entertainment", (req, res) -> {
             HashMap restaurants_and_activities = new HashMap();
             restaurants_and_activities.put("restaurants", model.getAllRestaurants());
             restaurants_and_activities.put("activities", model.getAllActivities());
-            return new ModelAndView(restaurants_and_activities,  "templates/schedule.vtl");
+            restaurants_and_activities.put("schedules", model.getSchedule());
+            return new ModelAndView(restaurants_and_activities,  "templates/entertainment.vtl");
         }, new VelocityTemplateEngine());
 
-        post("/schedule", (request, response) -> {
-//            HashMap schedules = new HashMap();
+        post("/entertainment", (request, response) -> {
             String restaurant_name = request.queryParams("restaurant_name");
-            System.out.println(restaurant_name);
             String trip_name = request.session().attribute("trip_name");
-            System.out.println(trip_name);
-//            String activity_name = request.queryParams("activity_name");
+            String activity_name = request.queryParams("activity_name");
             model.addRestaurants(restaurant_name, trip_name);
-            System.out.println(restaurant_name);
             response.redirect("/schedule");
             return null;
         });
 
-
+        get("/schedule", (req, res) -> {
+            model.getSchedule();
+            HashMap schedules = new HashMap();
+            schedules.put("schedules", model.getSchedule());
+            return new ModelAndView(schedules, "templates/schedule.vtl");
+        }, new VelocityTemplateEngine());
 
     }
 }
