@@ -14,6 +14,5 @@ public class Schedule {
         this.trip_name = trip_name;
         this.restaurant_name = restaurant_name;
         this.activity_name = activity_name;
-
     }
 }
