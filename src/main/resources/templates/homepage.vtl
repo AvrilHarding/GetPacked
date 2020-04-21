@@ -40,6 +40,14 @@
         font-size: 60px;
       }
 
+      h2 {
+        position: fixed;
+        top: 170px;
+        left: 450px;
+        text-align: center;
+        vertical-align: middle;
+      }
+
 
      .topnav {
        overflow: hidden;
@@ -67,7 +75,11 @@
 
         .form-inline {
           display: flex;
+          flex-flow: row wrap;
           align-items: center;
+          position: fixed;
+          bottom: 80px;
+
 
         }
 
@@ -77,6 +89,8 @@
           padding: 10px;
           background-color: white;
           border: 1px solid white;
+          border-radius: 10px;
+
         }
 
 
@@ -84,9 +98,23 @@
           background-color: #71b7e3;
         }
 
+        @media (max-width: 800px) {
+          .form-inline input {
+            margin: 10px 0;
+          }
+
+          .form-inline {
+            flex-direction: column;
+            align-items: stretch;
+          }
+        }
+
     p {
         color: white;
         font-size: 25px;
+        position: fixed;
+        left: 60px;
+        bottom: 150px;
     }
 
     .fa-instagram {
@@ -101,19 +129,36 @@
 
     <body>
     <h1 style="color:white; border:3px; border-style:solid; border-color:white; padding: 1em;">Get Packed</h1>
+    <h2 style="color:white">A schedule to organise your trip</h2>
     <br>
     <br>
-    <p>Create an account</p>
+
     <br>
     <br>
-    <form class="form-inline" method="post" action="/">
-      <input type="text" id="first_name" name="first_name" placeholder="First Name"><br>
-      <input type="text" id="last_name" name="last_name" placeholder="Last Name"><br>
-        <input type="text" id="username" name="username" placeholder="User Name"><br>
-          <input type="email" id="email_address" name="email_address" placeholder="Email"><br>
-            <input type="password" id="password" name="password" placeholder="Password"><br><br>
-               <button class="btn btn-outline-info" type="submit" value="Submit">Submit</button>
-    </form>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm">
+         <p>Create an account</p>
+        </div>
+        <div class="col-sm">
+          <form class="form-inline" method="post" action="/">
+            <input type="text" id="first_name" name="first_name" placeholder="First name"required> <br>
+            <span class="validity"></span><br>
+            <input type="text" id="last_name" name="last_name" placeholder="Last name"required> <br>
+            <span class="validity"></span><br>
+              <input type="text" id="username" name="username" size="30" placeholder="Username: ensure no spaces"required pattern="^\S+$"> <br>
+               <span class="validity"></span><br>
+                <input type="email" id="email_address" name="email_address" placeholder="Email"required><br>
+                <span class="validity"></span><br>
+                  <input type="password" id="password" name="password" placeholder="Password"required><br><br>
+                  <span class="validity"></span><br>
+                   <button class="btn btn-outline-info" type="submit" value="Submit">Submit</button>
+                    </form>
+        </div>
+        <div class="col-sm">
+        </div>
+      </div>
+    </div>
 
 
   </body>

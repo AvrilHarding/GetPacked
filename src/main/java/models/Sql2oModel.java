@@ -16,13 +16,14 @@ public class Sql2oModel implements Model {
     }
 
     @Override
-    public void createTrip(String trip_name, String destination) {
+    public void createTrip(String trip_name, String destination, String username) {
         try (Connection conn = sql2o.beginTransaction()) {
             UUID tripUuid = UUID.randomUUID();
-            conn.createQuery("insert into trips(trip_id, trip_name, destination) VALUES (:trip_id, :trip_name, :destination)")
+            conn.createQuery("insert into trips(trip_id, trip_name, destination, username) VALUES (:trip_id, :trip_name, :destination, :username)")
                     .addParameter("trip_id", tripUuid)
                     .addParameter("trip_name", trip_name)
                     .addParameter("destination", destination)
+                    .addParameter("username", username)
                     .executeUpdate();
             conn.commit();
 
@@ -30,11 +31,11 @@ public class Sql2oModel implements Model {
     }
 
     @Override
-    public List<Hotel> getAllHotels() {
+    public List<Hotel> getAllHotels(String destination) {
         try (Connection conn = sql2o.open()) {
 
-            List<Hotel> hotel = conn.createQuery("select * from hotels")
-
+            List<Hotel> hotel = conn.createQuery("select * from hotels where destination = :destination")
+            .addParameter("destination", destination)
                     .executeAndFetch(Hotel.class);
             return hotel;
         }
@@ -108,7 +109,6 @@ public class Sql2oModel implements Model {
                     .addParameter("restaurant_name", restaurant_name)
                     .addParameter("trip_name", trip_name)
                     .executeUpdate();
-
         }
     }
 
@@ -148,5 +148,14 @@ public class Sql2oModel implements Model {
         }
     }
 
+//    @Override
+//    public void loginUser(String username) {
+//        try (Connection conn = sql2o.open()) {
+//            conn.createQuery("insert into trips(username) VALUES (:username)")
+//                    .addParameter("username", username)
+//                    .executeUpdate();
+//
+//        }
+//    }
 
 }

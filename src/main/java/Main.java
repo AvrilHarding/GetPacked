@@ -55,40 +55,46 @@ public class Main {
         }, new VelocityTemplateEngine());
 
 
-//        post("/login", (request, response) -> {
-//
-//        });
+        post("/login", (request, response) -> {
+            String username = request.queryParams("username");
+            request.session().attribute("username", username);
+            response.redirect("/dashboard");
+            return null;
+        });
 
 
         get("/dashboard", (req, res) -> {
 //            HashMap dashboard = new HashMap();
+            String username = req.session().attribute("username");
             return new ModelAndView(new HashMap(), "templates/dashboard.vtl");
         }, new VelocityTemplateEngine());
 
 
         get("/newtrip", (req, res) -> {
 //            HashMap trip = new HashMap();
+            String username =  req.session().attribute("username");
             return new ModelAndView(new HashMap(), "templates/newtrip.vtl");
         }, new VelocityTemplateEngine());
 
 
         post("/newtrip", (request, response) -> {
             String trip_name = request.queryParams("trip_name_1");
-            String destination = request.queryParams("destination_1");
+            String destination = request.queryParams("destination");
+            String username = request.session().attribute("username");
             String hotel_name = null;
             String restaurant_name = null;
             String activity_name = null;
-            model.createTrip(trip_name, destination);
+            model.createTrip(trip_name, destination, username);
             model.createSchedule(trip_name, restaurant_name, activity_name);
             request.session().attribute("trip_name", trip_name);
+            request.session().attribute("destination", destination);
             response.redirect("/pickhotel");
             return null;
         });
 
         get("/pickhotel", (req, res) -> {
-            model.getAllHotels();
             HashMap hotel = new HashMap();
-            hotel.put("hotel", model.getAllHotels());
+            hotel.put("hotel", model.getAllHotels(req.session().attribute("destination")));
             hotel.put("trip_name", req.session().attribute("trip_name"));
             return new ModelAndView(hotel, "templates/pickhotel.vtl");
         }, new VelocityTemplateEngine());
