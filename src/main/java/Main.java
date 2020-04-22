@@ -85,7 +85,7 @@ public class Main {
             String restaurant_name = null;
             String activity_name = null;
             model.createTrip(trip_name, destination, username);
-            model.createSchedule(trip_name, restaurant_name, activity_name);
+//            model.createSchedule(trip_name, restaurant_name, activity_name);
             request.session().attribute("trip_name", trip_name);
             request.session().attribute("destination", destination);
             response.redirect("/pickhotel");
@@ -117,17 +117,18 @@ public class Main {
 
 
         get("/entertainment", (req, res) -> {
+            String trip_name = req.session().attribute("trip_name");
             HashMap restaurants_and_activities = new HashMap();
             restaurants_and_activities.put("restaurants", model.getAllRestaurants(req.session().attribute("destination")));
             restaurants_and_activities.put("activities", model.getAllActivities(req.session().attribute("destination")));
-            restaurants_and_activities.put("schedules", model.getSchedule());
+//            restaurants_and_activities.put("schedules", model.getSchedule());
             return new ModelAndView(restaurants_and_activities,  "templates/entertainment.vtl");
         }, new VelocityTemplateEngine());
 
         post("/entertainment", (request, response) -> {
             String[] restaurant_name = request.queryParamsValues("restaurant_name");
             String trip_name = request.session().attribute("trip_name");
-            String activity_name = request.queryParams("activity_name");
+            String[] activity_name = request.queryParamsValues("activity_name");
             System.out.println(restaurant_name);
             model.addRestaurants(restaurant_name, trip_name);
             model.addActivities(activity_name, trip_name);
