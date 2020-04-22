@@ -77,11 +77,11 @@ public class Sql2oModel implements Model {
     }
 
 
-    public List<Trip> getAllTrips() {
+    public List<Trip> getAllTrips(String username) {
         try (Connection conn = sql2o.open()) {
 
-            List<Trip> trips = conn.createQuery("select trip_name, destination, hotel_name from trips")
-
+            List<Trip> trips = conn.createQuery("select trip_name, destination, hotel_name from trips where username = :username")
+            .addParameter("username", username)
                     .executeAndFetch(Trip.class);
             return trips;
         }
@@ -156,6 +156,16 @@ public class Sql2oModel implements Model {
         }
     }
 
+    @Override
+    public List<Schedules> getOneSchedule(String trip_name) {
+        try (Connection conn = sql2o.open()) {
+
+            List<Schedules> schedule = conn.createQuery("select * from schedules where trip_name = :trip_name")
+                    .addParameter("trip_name", trip_name)
+                    .executeAndFetch(Schedules.class);
+            return schedule;
+        }
+    }
 //    @Override
 //    public void loginUser(String username) {
 //        try (Connection conn = sql2o.open()) {
