@@ -13,7 +13,7 @@ public interface Model {
     void addHotel(String hotel_name, String trip_name);
     List<Restaurants> getAllRestaurants(String destination);
     List<Activities> getAllActivities(String destination);
-    List getAllTrips();
+    List getAllTrips(String username);
 
 
 //    void createSchedule(String trip_name, String restaurant_name, String activity_name);

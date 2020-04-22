@@ -77,11 +77,11 @@ public class Sql2oModel implements Model {
     }
 
 
-    public List<Trip> getAllTrips() {
+    public List<Trip> getAllTrips(String username) {
         try (Connection conn = sql2o.open()) {
 
-            List<Trip> trips = conn.createQuery("select trip_name, destination, hotel_name from trips")
-
+            List<Trip> trips = conn.createQuery("select trip_name, destination, hotel_name from trips where username = :username")
+            .addParameter("username", username)
                     .executeAndFetch(Trip.class);
             return trips;
         }
