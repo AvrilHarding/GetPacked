@@ -88,8 +88,8 @@ footer {
        <label for="restaurant_name"> $restaurants.restaurant_name</label><br>
         <p> $restaurants.restaurant_descr,
         $restaurants.restaurant_star_rating Stars,
-        Destination: $restaurants.destination,
         $restaurants.cuisine_tags,
+        Destination: $restaurants.destination
        </p>
        #end
        <h3>Activities</h3>
@@ -97,8 +97,8 @@ footer {
         <input type="checkbox" name="activity_name" value=$activities.activity_name>
         <label for="activity_name"> $activities.activity_name</label><br>
         <p> $activities.activity_descr,
-         Destination: $activities.destination,
          $activities.activity_tags,
+         Destination: $activities.destination
          </p>
          #end
        <input type="submit" value="Submit">

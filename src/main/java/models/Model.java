@@ -18,7 +18,7 @@ public interface Model {
 
     void createSchedule(String trip_name, String restaurant_name, String activity_name);
 
-    void addRestaurants(String restaurant_name, String trip_name);
+    void addRestaurants(String[] restaurant_name, String trip_name);
 
     void addActivities(String activity_name, String trip_name);
 

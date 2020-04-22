@@ -103,14 +103,19 @@ public class Sql2oModel implements Model {
     }
 
     @Override
-    public void addRestaurants(String restaurant_name, String trip_name) {
-        try (Connection conn = sql2o.open()) {
-            conn.createQuery("update schedules SET restaurant_name = :restaurant_name WHERE trip_name = :trip_name")
-                    .addParameter("restaurant_name", restaurant_name)
-                    .addParameter("trip_name", trip_name)
-                    .executeUpdate();
+    public void addRestaurants(String[] restaurant_names, String trip_name) {
+        for (String strTemp :restaurant_names){
+            try (Connection conn = sql2o.open()) {
+                conn.createQuery("update schedules SET restaurant_name = :restaurant_name WHERE trip_name = :trip_name")
+                        .addParameter("restaurant_name", strTemp)
+                        .addParameter("trip_name", trip_name)
+                        .executeUpdate();
+            }
+            System.out.println(strTemp);
         }
+
     }
+
 
     public void addActivities(String activity_name, String trip_name) {
         try (Connection conn = sql2o.open()) {

@@ -125,7 +125,7 @@ public class Main {
         }, new VelocityTemplateEngine());
 
         post("/entertainment", (request, response) -> {
-            String restaurant_name = request.queryParams("restaurant_name");
+            String[] restaurant_name = request.queryParamsValues("restaurant_name");
             String trip_name = request.session().attribute("trip_name");
             String activity_name = request.queryParams("activity_name");
             System.out.println(restaurant_name);
