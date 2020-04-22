@@ -138,12 +138,22 @@ public class Main {
 
 
         get("/schedule", (req, res) -> {
-            model.getOneSchedule(req.session().attribute("trip_name"));
+
+            if (req.session().attribute("trip_name") != null) {
+            String trip_name = req.session().attribute("trip_name");
+            model.getOneSchedule(trip_name);
             HashMap schedule = new HashMap();
-            schedule.put("schedules", model.getOneSchedule(req.session().attribute("trip_name")));
+            schedule.put("schedules", model.getOneSchedule(trip_name));
             return new ModelAndView(schedule, "templates/schedule.vtl");
-        }, new VelocityTemplateEngine());
-        
+        } else {
+                String trip_name = req.queryParams("trip_name");
+                model.getOneSchedule(trip_name);
+                HashMap schedule = new HashMap();
+                schedule.put("schedules", model.getOneSchedule(trip_name));
+                return new ModelAndView(schedule, "templates/schedule.vtl");
+            }}
+            , new VelocityTemplateEngine());
+
 
     }
 }
