@@ -26,5 +26,7 @@ public interface Model {
 
     void addUser(String first_name, String last_name, String username, String email_address, String password);
 
+    List<Schedules> getOneSchedule(String trip_name);
+
 //    void loginUser(String username);
 }

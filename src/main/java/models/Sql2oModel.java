@@ -156,6 +156,16 @@ public class Sql2oModel implements Model {
         }
     }
 
+    @Override
+    public List<Schedules> getOneSchedule(String trip_name) {
+        try (Connection conn = sql2o.open()) {
+
+            List<Schedules> schedule = conn.createQuery("select * from schedules where trip_name = :trip_name")
+                    .addParameter("trip_name", trip_name)
+                    .executeAndFetch(Schedules.class);
+            return schedule;
+        }
+    }
 //    @Override
 //    public void loginUser(String username) {
 //        try (Connection conn = sql2o.open()) {

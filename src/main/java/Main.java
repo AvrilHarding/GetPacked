@@ -138,10 +138,10 @@ public class Main {
 
 
         get("/schedule", (req, res) -> {
-            model.getSchedule();
-            HashMap schedules = new HashMap();
-            schedules.put("schedules", model.getSchedule());
-            return new ModelAndView(schedules, "templates/schedule.vtl");
+            model.getOneSchedule(req.session().attribute("trip_name"));
+            HashMap schedule = new HashMap();
+            schedule.put("schedules", model.getOneSchedule(req.session().attribute("trip_name")));
+            return new ModelAndView(schedule, "templates/schedule.vtl");
         }, new VelocityTemplateEngine());
         
 
