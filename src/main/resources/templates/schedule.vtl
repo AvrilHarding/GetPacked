@@ -8,10 +8,16 @@
   <body>
 
  <article>
-    <h1>Schedule</h1>
+<h1>Schedule for
+    #foreach( $schedules in $schedules )
+        #if( $foreach.count > 1 )
+            #break
+        #end
+     $schedules.trip_name
+    #end
+</h1>
 
     #foreach( $schedules in $schedules )
-    <h3>$schedules.trip_name </h3>
     <p>Restaurant</p>
     <li>$schedules.restaurant_name </li>
     <p>Activity</p>
@@ -21,5 +27,3 @@
 
   </body>
 </html>
-
-

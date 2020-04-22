@@ -113,11 +113,7 @@ public class Main {
         get("/yourtrips", (req, res) -> {
 
             String username = req.session().attribute("username");
-            System.out.println(username);
-            System.out.println("222222222");
             model.getAllTrips(username);
-            System.out.println(username);
-            System.out.println("333333333");
             HashMap trips = new HashMap();
             trips.put("trips", model.getAllTrips(username));
             return new ModelAndView(trips, "templates/yourtrips.vtl");
