@@ -13,7 +13,7 @@ public interface Model {
     void addHotel(String hotel_name, String trip_name);
     List<Restaurants> getAllRestaurants(String destination);
     List<Activities> getAllActivities(String destination);
-    List getAllTrips();
+    List getAllTrips(String username);
 
 
 //    void createSchedule(String trip_name, String restaurant_name, String activity_name);
@@ -25,6 +25,8 @@ public interface Model {
     List<Schedules> getSchedule();
 
     void addUser(String first_name, String last_name, String username, String email_address, String password);
+
+    List<Schedules> getOneSchedule(String trip_name);
 
 //    void loginUser(String username);
 }
