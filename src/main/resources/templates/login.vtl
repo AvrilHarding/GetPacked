@@ -2,9 +2,10 @@
 <html>
   <head>
     <title>GetPacked!</title>
- <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap" rel="stylesheet">
     <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
 
     <div class="topnav">
          <a class="active" href="/"><i class="fa fa-fw fa-home"></i>Home</a>
@@ -14,6 +15,13 @@
        </div>
 
  <style>
+
+  body, html {
+         text-align: center;
+         font-family: 'Baloo Bhaina 2', cursive;
+         align-items: center:
+         align: center;
+     }
 
     .topnav {
         overflow: hidden;
@@ -39,43 +47,64 @@
         color: white;
       }
 
+    .form-horizontal {
+        font-family: Baloo Bhaina 2', cursive;
+        border-style: solid;
+        border-width: medium;
+        border-color: #b9dded;
+        border-radius: 5px;
+        padding: 25px;
+        background-color: #7ba0db;
+        height: 400px;
+        width: 300px;
+        position: fixed;
+        top: 150px;
+        left: 500px;
+        flex-direction: column;
+        align-items: stretch;
+        display: flex;
 
-        .title-font {
-        font-family: 'Helvetica', sans-serif;
-        font-size: 48px;
-      }
+    }
 
-      body {
-        background-image: url("");
-        background: white;
+    .form-horizontal input {
+         vertical-align: middle;
+          margin: 5px 5px 5px 0;
+          padding: 10px;
+          background-color: white;
+          border: 1px solid white;
+          border-radius: 5px;
+    }
+
+    .form-horizontal label {
+        font-size: 25px;
+        color: white;
+    }
+
+    p {
         text-align: center;
-      }
-
-      h1 {
-        text-align: center;
-      }
-
-       .buttons {
-            text-align: center;
-        }
-
-
+        vertical-align: middle;
+        font-size: 35px;
+        font-weight: bold;
+        color: #7ba0db
+    }
 
     </style>
   </head>
 
 
     <body>
+    <div class="bg-image"></div>
     <h1></h1>
 <p>Login below with your account details</p>
-<form method="post" action="/login">
+<div class="container">
+<form class="form-horizontal" method="post" action="/login">
   <label for="username">User name:</label><br>
     <input type="text" id="username" name="username"><br>
       <label for="password">Password:</label><br>
         <input type="password" id="password" name="password"><br><br>
   <input type="submit" value="Submit">
 </form>
-
+</div>
 
 
 
