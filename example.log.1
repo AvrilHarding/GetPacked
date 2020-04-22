@@ -1,3 +1,4 @@
+
 DEBUG qtp773599251-17 org.eclipse.jetty.util.thread.ReservedThreadExecutor - ReservedThreadExecutor@6e401b78{s=2/4,p=0}@SelectorManager@ServerConnector@7db2c8ec{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} tryExecute EatWhatYouKill@7e6f5fbc/SelectorProducer@6b12263/PRODUCING/ReservedThreadExecutor@6e401b78{s=2/4,p=0}@SelectorManager@ServerConnector@7db2c8ec{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
 DEBUG qtp773599251-17 org.eclipse.jetty.util.thread.ReservedThreadExecutor - ReservedThreadExecutor@6e401b78{s=1/4,p=0}@SelectorManager@ServerConnector@7db2c8ec{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}@94b1102 offer EatWhatYouKill@7e6f5fbc/SelectorProducer@6b12263/PRODUCING/ReservedThreadExecutor@6e401b78{s=1/4,p=0}@SelectorManager@ServerConnector@7db2c8ec{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
 DEBUG qtp773599251-17 org.eclipse.jetty.util.thread.strategy.EatWhatYouKill - EatWhatYouKill@7e6f5fbc/SelectorProducer@6b12263/IDLE/ReservedThreadExecutor@6e401b78{s=1/4,p=0}@SelectorManager@ServerConnector@7db2c8ec{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} EPC t=CEP:SocketChannelEndPoint@47c85012{/[0:0:0:0:0:0:0:1]:65296<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=34/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@259e112c[p=HttpParser{s=START,0 of -1},g=HttpGenerator@5e74e9cf{s=START}]=>HttpChannelOverHttp@33d54e36{r=0,c=false,a=IDLE,uri=null}:runFillable:BLOCKING
@@ -256,11 +257,171 @@ Host: localhost:4567
 Connection: keep-alive
 Upgrade-Insecure-Requests: 1
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+=======
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpInput - HttpInputOverHTTP@4ace0c63[c=15,q=1,[0]=EOF,s=STREAM] read 1 from Content@6db01885{HeapByteBufferR@546a0e27[p=1223,l=1236,c=8192,r=13]={POST /login HTTP/...username=joredf<<<ern&password=>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpInput - HttpInputOverHTTP@4ace0c63[c=16,q=1,[0]=EOF,s=STREAM] read 1 from Content@6db01885{HeapByteBufferR@546a0e27[p=1224,l=1236,c=8192,r=12]={POST /login HTTP/...sername=joredfe<<<rn&password=>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpInput - HttpInputOverHTTP@4ace0c63[c=17,q=1,[0]=EOF,s=STREAM] read 1 from Content@6db01885{HeapByteBufferR@546a0e27[p=1225,l=1236,c=8192,r=11]={POST /login HTTP/...ername=joredfer<<<n&password=>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpInput - HttpInputOverHTTP@4ace0c63[c=18,q=1,[0]=EOF,s=STREAM] read 1 from Content@6db01885{HeapByteBufferR@546a0e27[p=1226,l=1236,c=8192,r=10]={POST /login HTTP/...rname=joredfern<<<&password=>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpInput - HttpInputOverHTTP@4ace0c63[c=19,q=1,[0]=EOF,s=STREAM] read 1 from Content@6db01885{HeapByteBufferR@546a0e27[p=1227,l=1236,c=8192,r=9]={POST /login HTTP/...name=joredfern&<<<password=>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpInput - HttpInputOverHTTP@4ace0c63[c=20,q=1,[0]=EOF,s=STREAM] read 1 from Content@6db01885{HeapByteBufferR@546a0e27[p=1228,l=1236,c=8192,r=8]={POST /login HTTP/...ame=joredfern&p<<<assword=>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpInput - HttpInputOverHTTP@4ace0c63[c=21,q=1,[0]=EOF,s=STREAM] read 1 from Content@6db01885{HeapByteBufferR@546a0e27[p=1229,l=1236,c=8192,r=7]={POST /login HTTP/...me=joredfern&pa<<<ssword=>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpInput - HttpInputOverHTTP@4ace0c63[c=22,q=1,[0]=EOF,s=STREAM] read 1 from Content@6db01885{HeapByteBufferR@546a0e27[p=1230,l=1236,c=8192,r=6]={POST /login HTTP/...e=joredfern&pas<<<sword=>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpInput - HttpInputOverHTTP@4ace0c63[c=23,q=1,[0]=EOF,s=STREAM] read 1 from Content@6db01885{HeapByteBufferR@546a0e27[p=1231,l=1236,c=8192,r=5]={POST /login HTTP/...=joredfern&pass<<<word=>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpInput - HttpInputOverHTTP@4ace0c63[c=24,q=1,[0]=EOF,s=STREAM] read 1 from Content@6db01885{HeapByteBufferR@546a0e27[p=1232,l=1236,c=8192,r=4]={POST /login HTTP/...joredfern&passw<<<ord=>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpInput - HttpInputOverHTTP@4ace0c63[c=25,q=1,[0]=EOF,s=STREAM] read 1 from Content@6db01885{HeapByteBufferR@546a0e27[p=1233,l=1236,c=8192,r=3]={POST /login HTTP/...oredfern&passwo<<<rd=>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpInput - HttpInputOverHTTP@4ace0c63[c=26,q=1,[0]=EOF,s=STREAM] read 1 from Content@6db01885{HeapByteBufferR@546a0e27[p=1234,l=1236,c=8192,r=2]={POST /login HTTP/...redfern&passwor<<<d=>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpInput - HttpInputOverHTTP@4ace0c63[c=27,q=1,[0]=EOF,s=STREAM] read 1 from Content@6db01885{HeapByteBufferR@546a0e27[p=1235,l=1236,c=8192,r=1]={POST /login HTTP/...edfern&password<<<=>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpInput - HttpInputOverHTTP@4ace0c63[c=28,q=1,[0]=EOF,s=STREAM] read 1 from Content@6db01885{HeapByteBufferR@546a0e27[p=1236,l=1236,c=8192,r=0]={POST /login HTTP/...dfern&password=<<<>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - releaseRequestBuffer HttpConnection@57d3df39[p=HttpParser{s=END,28 of 28},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=DISPATCHED,uri=//localhost:4567/login}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=34/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=END,28 of 28},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=DISPATCHED,uri=//localhost:4567/login}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpChannelState - onEof HttpChannelState@513d6447{s=DISPATCHED a=NOT_ASYNC i=true r=IDLE w=false}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.session - Checking node013y25csusgo7yzom3szu2az9h0 is in use by at least one context
+DEBUG qtp604335532-21 org.eclipse.jetty.server.session - Checked node013y25csusgo7yzom3szu2az9h0, in use:
+DEBUG qtp604335532-21 org.eclipse.jetty.server.session - Creating new session id=node011rsxoe005h70dhv06cust9aq0
+DEBUG qtp604335532-21 org.eclipse.jetty.server.session - Req count=1 for id=node011rsxoe005h70dhv06cust9aq0
+DEBUG qtp604335532-21 org.eclipse.jetty.server.session - updateInactivityTimer
+DEBUG qtp604335532-21 org.eclipse.jetty.server.session - setIdleTimeout called: old=0 new=-1
+DEBUG qtp604335532-21 org.eclipse.jetty.server.session - Session is immortal && no inactivity eviction: timer cancelled
+DEBUG qtp604335532-21 spark.Response - Redirecting (Found 302 to /dashboard
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpChannel - sendResponse info=null content=HeapByteBuffer@2ada9aa8[p=0,l=0,c=0,r=0]={<<<>>>} complete=true committing=true callback=Blocker@56100249{null}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpChannel - COMMIT for /login on HttpChannelOverHttp@4803a361{r=2,c=true,a=DISPATCHED,uri=//localhost:4567/login}
+302 null HTTP/1.1
+Date: Wed, 22 Apr 2020 12:33:26 GMT
+Set-Cookie: JSESSIONID=node011rsxoe005h70dhv06cust9aq0.node0;Path=/
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Location: http://localhost:4567/dashboard
+
+
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - org.eclipse.jetty.server.HttpConnection$SendCallback@4f1213bf[PROCESSING][i=HTTP/1.1{s=302,h=4,cl=-1},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@7cfeeb63] generate: NEED_HEADER (null,[p=0,l=0,c=0,r=0],true)@START
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpGenerator - generateHeaders HTTP/1.1{s=302,h=4,cl=-1} last=true content=HeapByteBuffer@2ada9aa8[p=0,l=0,c=0,r=0]={<<<>>>}
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpGenerator - Date: Wed, 22 Apr 2020 12:33:26 GMT
+Set-Cookie: JSESSIONID=node011rsxoe005h70dhv06cust9aq0.node0;Path=/
+Expires: Thu, 01 Jan 1970 00:00:00 GMT
+Location: http://localhost:4567/dashboard
+
+
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpGenerator - CONTENT_LENGTH
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - org.eclipse.jetty.server.HttpConnection$SendCallback@4f1213bf[PROCESSING][i=HTTP/1.1{s=302,h=4,cl=-1},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@7cfeeb63] generate: FLUSH ([p=0,l=262,c=8192,r=262],[p=0,l=0,c=0,r=0],true)@COMPLETING
+DEBUG qtp604335532-21 org.eclipse.jetty.io.WriteFlusher - write: WriteFlusher@6053c444{IDLE}->null [HeapByteBuffer@4c6a54f9[p=0,l=262,c=8192,r=262]={<<<HTTP/1.1 302 Foun....v20171121)\r\n\r\n>>>tel Mac OS X 10_1...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}]
+DEBUG qtp604335532-21 org.eclipse.jetty.io.WriteFlusher - update WriteFlusher@6053c444{WRITING}->null:IDLE-->WRITING
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ChannelEndPoint - flushed 262 SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=W,to=43/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=END,28 of 28},g=HttpGenerator@68bed3d4{s=COMPLETING}]=>HttpChannelOverHttp@4803a361{r=2,c=true,a=DISPATCHED,uri=//localhost:4567/login}
+DEBUG qtp604335532-21 org.eclipse.jetty.io.WriteFlusher - Flushed=true 262/262+0 WriteFlusher@6053c444{WRITING}->null
+DEBUG qtp604335532-21 org.eclipse.jetty.io.WriteFlusher - update WriteFlusher@6053c444{IDLE}->null:WRITING-->IDLE
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - org.eclipse.jetty.server.HttpConnection$SendCallback@4f1213bf[PROCESSING][i=HTTP/1.1{s=302,h=4,cl=-1},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@7cfeeb63] generate: DONE ([p=262,l=262,c=8192,r=0],[p=0,l=0,c=0,r=0],true)@END
+DEBUG qtp604335532-21 org.eclipse.jetty.server.session - FinalSession=org.eclipse.jetty.server.session.Session@1326aff2 old_session_manager=null this=spark.embeddedserver.jetty.JettyHandler992421772==dftMaxIdleSec=-1
+DEBUG qtp604335532-21 org.eclipse.jetty.server.session - Store: id=node011rsxoe005h70dhv06cust9aq0, dirty=true, lsave=0, period=0, elapsed=1587558806310
+DEBUG qtp604335532-21 org.eclipse.jetty.server.session - Non passivating SessionDataStore, session in SessionCache only id=node011rsxoe005h70dhv06cust9aq0
+DEBUG qtp604335532-21 org.eclipse.jetty.server.Server - handled=true async=false committed=true on HttpChannelOverHttp@4803a361{r=2,c=true,a=DISPATCHED,uri=//localhost:4567/login}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpChannelState - unhandle HttpChannelState@513d6447{s=DISPATCHED a=NOT_ASYNC i=true r=READY w=false}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@4803a361{r=2,c=true,a=COMPLETING,uri=//localhost:4567/login} action COMPLETE
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpChannelState - onComplete HttpChannelState@513d6447{s=COMPLETING a=NOT_ASYNC i=false r=READY w=false}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpChannel - COMPLETE for /login written=0
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpChannelState - recycle HttpChannelState@513d6447{s=COMPLETED a=NOT_ASYNC i=false r=READY w=false}
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - reset HttpParser{s=END,28 of 28}
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - END --> START
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null} handle exit, result COMPLETE
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ChannelEndPoint - filled 0 SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=4/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ChannelEndPoint - filled 0 SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=4/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=5/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null} filled 0 HeapByteBuffer@4c6a54f9[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 302 Foun...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=6/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null} parse HeapByteBuffer@4c6a54f9[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 302 Foun...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - parseNext s=START HeapByteBuffer@4c6a54f9[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 302 Foun...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=7/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null} parsed false HttpParser{s=START,0 of -1}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - releaseRequestBuffer HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=7/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-21 org.eclipse.jetty.io.AbstractConnection - fillInterested HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=8/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-21 org.eclipse.jetty.io.FillInterest - interested FillInterest@76fd874f{AC.ReadCB@57d3df39{HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=0/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}}}
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ChannelEndPoint - changeInterests p=false 0->1 for SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=1/3600000}{io=0/1,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ManagedSelector - Queued change CEP:SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=1/3600000}{io=0/1,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}:runUpdateKey:NON_BLOCKING on org.eclipse.jetty.io.ManagedSelector@616d08b5 id=1 keys=1 selected=0 actions=0
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@1a56e0ac woken up from select, 0/1 selected
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=2/3600000}{io=0/1,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null} onFillable exit HttpChannelState@513d6447{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false} null
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@1a56e0ac processing 0 keys, 1 actions
+DEBUG qtp604335532-21 org.eclipse.jetty.util.thread.ReservedThreadExecutor - ReservedThreadExecutor@362cb952{s=2/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}@461a2d0d waiting
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ManagedSelector - action=CEP:SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=3/3600000}{io=0/1,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}:runUpdateKey:NON_BLOCKING wakeup=false
+DEBUG qtp604335532-19 org.eclipse.jetty.util.thread.strategy.EatWhatYouKill - EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/PRODUCING/ReservedThreadExecutor@362cb952{s=2/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} t=CEP:SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=4/3600000}{io=0/1,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}:runUpdateKey:NON_BLOCKING/NON_BLOCKING
+DEBUG qtp604335532-19 org.eclipse.jetty.util.thread.strategy.EatWhatYouKill - EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/PRODUCING/ReservedThreadExecutor@362cb952{s=2/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} PC t=CEP:SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=4/3600000}{io=0/1,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}:runUpdateKey:NON_BLOCKING
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ChannelEndPoint - Key interests updated 0 -> 1 on SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=5/3600000}{io=1/1,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ManagedSelector - Forcing selection, actions=0
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ManagedSelector - action=null wakeup=false
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@1a56e0ac waiting on select
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@1a56e0ac woken up from select, 1/1 selected
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@1a56e0ac processing 1 keys, 0 actions
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ManagedSelector - selected channel=java.nio.channels.SocketChannel[connected local=/[0:0:0:0:0:0:0:1]:4567 remote=/[0:0:0:0:0:0:0:1]:54060], selector=sun.nio.ch.KQueueSelectorImpl@1a56e0ac, interestOps=1, readyOps=1 SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=6/3600000}{io=1/1,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null} 
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ChannelEndPoint - onSelected 1->0 r=true w=false for SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=7/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ChannelEndPoint - task CEP:SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=8/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}:runFillable:BLOCKING
+DEBUG qtp604335532-19 org.eclipse.jetty.util.thread.strategy.EatWhatYouKill - EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/PRODUCING/ReservedThreadExecutor@362cb952{s=2/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} t=CEP:SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=8/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}:runFillable:BLOCKING/BLOCKING
+DEBUG qtp604335532-19 org.eclipse.jetty.util.thread.ReservedThreadExecutor - ReservedThreadExecutor@362cb952{s=2/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} tryExecute EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/PRODUCING/ReservedThreadExecutor@362cb952{s=2/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+DEBUG qtp604335532-19 org.eclipse.jetty.util.thread.ReservedThreadExecutor - ReservedThreadExecutor@362cb952{s=1/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}@461a2d0d offer EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/PRODUCING/ReservedThreadExecutor@362cb952{s=1/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+DEBUG qtp604335532-19 org.eclipse.jetty.util.thread.strategy.EatWhatYouKill - EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/IDLE/ReservedThreadExecutor@362cb952{s=1/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} EPC t=CEP:SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=10/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}:runFillable:BLOCKING
+DEBUG qtp604335532-19 org.eclipse.jetty.io.FillInterest - fillable FillInterest@76fd874f{AC.ReadCB@57d3df39{HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=10/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}}}
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpConnection - HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=11/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null} onFillable enter HttpChannelState@513d6447{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false} null
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ChannelEndPoint - filled 1111 SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=11/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpConnection - HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=1/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null} filled 1111 HeapByteBuffer@4c6a54f9[p=0,l=1111,c=8192,r=1111]={<<<GET /dashboard HT...t9aq0.node0\r\n\r\n>>>D--ec6db0d0aa0e36...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpConnection - HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=1/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null} parse HeapByteBuffer@4c6a54f9[p=0,l=1111,c=8192,r=1111]={<<<GET /dashboard HT...t9aq0.node0\r\n\r\n>>>D--ec6db0d0aa0e36...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - parseNext s=START HeapByteBuffer@4c6a54f9[p=0,l=1111,c=8192,r=1111]={<<<GET /dashboard HT...t9aq0.node0\r\n\r\n>>>D--ec6db0d0aa0e36...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - START --> SPACE1
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - SPACE1 --> URI
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - URI --> SPACE2
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - SPACE2 --> REQUEST_VERSION
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - REQUEST_VERSION --> HEADER
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:Host: localhost:4567 --> IN_VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:Host: localhost:4567 --> FIELD
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:Connection: keep-alive --> IN_VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:Connection: keep-alive --> FIELD
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> FIELD
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_NAME
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> FIELD
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36 --> IN_VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36 --> FIELD
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_NAME
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> FIELD
+DEBUG qtp604335532-21 org.eclipse.jetty.util.thread.ReservedThreadExecutor - ReservedThreadExecutor@362cb952{s=1/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}@461a2d0d task=EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/IDLE/ReservedThreadExecutor@362cb952{s=1/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9 --> IN_VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9 --> FIELD
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_NAME
+DEBUG qtp604335532-21 org.eclipse.jetty.util.thread.strategy.EatWhatYouKill - EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/IDLE/ReservedThreadExecutor@362cb952{s=1/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} run
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> VALUE
+DEBUG qtp604335532-21 org.eclipse.jetty.util.thread.strategy.EatWhatYouKill - EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/IDLE/ReservedThreadExecutor@362cb952{s=1/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} produce
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_VALUE
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ManagedSelector - action=null wakeup=false
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> FIELD
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_NAME
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> VALUE
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ChannelEndPoint - Key interests updated 1 -> 0 on SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=5/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=HEADER,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=2,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_VALUE
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@1a56e0ac waiting on select
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> FIELD
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_NAME
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> FIELD
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> FIELD
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:Accept-Encoding: gzip, deflate, br --> IN_VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:Accept-Encoding: gzip, deflate, br --> FIELD
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:Accept-Language: en-GB,en-US;q=0.9,en;q=0.8 --> IN_VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:Accept-Language: en-GB,en-US;q=0.9,en;q=0.8 --> FIELD
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> FIELD
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER --> END
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpChannel - REQUEST for //localhost:4567/dashboard on HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=//localhost:4567/dashboard}
+GET //localhost:4567/dashboard HTTP/1.1
+Host: localhost:4567
+Connection: keep-alive
+Cache-Control: max-age=0
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36
+
 Sec-Fetch-Dest: document
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
 Sec-Fetch-Site: same-origin
 Sec-Fetch-Mode: navigate
-Sec-Fetch-User: ?1
+
 Referer: http://localhost:4567/dashboard
 Accept-Encoding: gzip, deflate, br
 Accept-Language: en-US,en;q=0.9
@@ -431,11 +592,333 @@ Origin: http://localhost:4567
 Upgrade-Insecure-Requests: 1
 Content-Type: application/x-www-form-urlencoded
 User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.163 Safari/537.36
+
+Referer: http://localhost:4567/login
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: rack.session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVG86HVJhY2s6OlNlc3Npb246OlNlc3Npb25JZAY6D0BwdWJsaWNfaWRJIkVmMDA4Y2ZhNjM0YzIxNTIyMTJiNmMxNmE2NjQwMWZhODIyZGY0Y2RmNDMwZWQ1ZmJlZDQ3OGJjMzZmYmExNzI2BjsARkkiCWNzcmYGOwBGSSIxb09Db0hRQlFWSGQ4VTdDeFhYKzJaSUtCMkYvem9qdDRXMVJvbitHQ0ovMD0GOwBGSSINdHJhY2tpbmcGOwBGewZJIhRIVFRQX1VTRVJfQUdFTlQGOwBUSSItOGJhYmNmZmM1NWE5ZjRlYjJjZWUzODU5YWIwMzEzMzU5MTg4MzMyZgY7AEY%3D--ec6db0d0aa0e36466c48874a079fb977f89da024; JSESSIONID=node011rsxoe005h70dhv06cust9aq0.node0
+
+
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=//localhost:4567/dashboard} onContentComplete
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=//localhost:4567/dashboard} onRequestComplete
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpInput - HttpInputOverHTTP@4ace0c63[c=0,q=0,[0]=null,s=STREAM] addContent EOF
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpConnection - HttpConnection@57d3df39[p=HttpParser{s=END,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=//localhost:4567/dashboard}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=10/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=END,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=//localhost:4567/dashboard} parsed true HttpParser{s=END,0 of -1}
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpConnection - releaseRequestBuffer HttpConnection@57d3df39[p=HttpParser{s=END,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=//localhost:4567/dashboard}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=10/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=END,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=//localhost:4567/dashboard}
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=//localhost:4567/dashboard} handle //localhost:4567/dashboard 
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpChannelState - handling HttpChannelState@513d6447{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false}
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@4803a361{r=3,c=false,a=DISPATCHED,uri=//localhost:4567/dashboard} action DISPATCH
+DEBUG qtp604335532-19 org.eclipse.jetty.server.Server - REQUEST GET /dashboard on HttpChannelOverHttp@4803a361{r=3,c=false,a=DISPATCHED,uri=//localhost:4567/dashboard}
+DEBUG qtp604335532-19 org.eclipse.jetty.server.session - Got Session ID node011rsxoe005h70dhv06cust9aq0.node0 from cookie
+DEBUG qtp604335532-19 org.eclipse.jetty.server.session - Testing expiry on session node011rsxoe005h70dhv06cust9aq0: expires at 0 now 1587558806338 maxIdle -1
+DEBUG qtp604335532-19 org.eclipse.jetty.server.session - Testing expiry on session node011rsxoe005h70dhv06cust9aq0: expires at 0 now 1587558806339 maxIdle -1
+DEBUG qtp604335532-19 org.eclipse.jetty.server.session - sessionHandler=spark.embeddedserver.jetty.JettyHandler992421772==dftMaxIdleSec=-1
+DEBUG qtp604335532-19 org.eclipse.jetty.server.session - session=org.eclipse.jetty.server.session.Session@1326aff2
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpChannel - sendResponse info=null content=DirectByteBuffer@24a61c84[p=0,l=939,c=32768,r=939]={<<<<!DOCTYPE html>\n<...</body>\n</html>>>>av a:hover {\n    ...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} complete=false committing=true callback=Blocker@56100249{null}
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpChannel - COMMIT for /dashboard on HttpChannelOverHttp@4803a361{r=3,c=true,a=DISPATCHED,uri=//localhost:4567/dashboard}
+200 null HTTP/1.1
+Date: Wed, 22 Apr 2020 12:33:26 GMT
+Content-Type: text/html;charset=utf-8
+
+
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpConnection - org.eclipse.jetty.server.HttpConnection$SendCallback@4f1213bf[PROCESSING][i=HTTP/1.1{s=200,h=2,cl=-1},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@d7f3574] generate: NEED_HEADER (null,[p=0,l=939,c=32768,r=939],false)@START
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpGenerator - generateHeaders HTTP/1.1{s=200,h=2,cl=-1} last=false content=DirectByteBuffer@24a61c84[p=0,l=939,c=32768,r=939]={<<<<!DOCTYPE html>\n<...</body>\n</html>>>>av a:hover {\n    ...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpGenerator - Date: Wed, 22 Apr 2020 12:33:26 GMT
+Content-Type: text/html;charset=utf-8
+
+
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpGenerator - CHUNKED_CONTENT
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpConnection - org.eclipse.jetty.server.HttpConnection$SendCallback@4f1213bf[PROCESSING][i=HTTP/1.1{s=200,h=2,cl=-1},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@d7f3574] generate: FLUSH ([p=0,l=160,c=8192,r=160],[p=0,l=939,c=32768,r=939],false)@COMMITTED
+DEBUG qtp604335532-19 org.eclipse.jetty.io.WriteFlusher - write: WriteFlusher@6053c444{IDLE}->null [HeapByteBuffer@4c6a54f9[p=0,l=160,c=8192,r=160]={<<<HTTP/1.1 200 OK\r\n...71121)\r\n\r\n3AB\r\n>>>h; Intel Mac OS X...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00},DirectByteBuffer@24a61c84[p=0,l=939,c=32768,r=939]={<<<<!DOCTYPE html>\n<...</body>\n</html>>>>av a:hover {\n    ...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}]
+DEBUG qtp604335532-19 org.eclipse.jetty.io.WriteFlusher - update WriteFlusher@6053c444{WRITING}->null:IDLE-->WRITING
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ChannelEndPoint - flushed 1099 SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=W,to=28/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=END,0 of -1},g=HttpGenerator@68bed3d4{s=COMMITTED}]=>HttpChannelOverHttp@4803a361{r=3,c=true,a=DISPATCHED,uri=//localhost:4567/dashboard}
+DEBUG qtp604335532-19 org.eclipse.jetty.io.WriteFlusher - Flushed=true 160/160+1 WriteFlusher@6053c444{WRITING}->null
+DEBUG qtp604335532-19 org.eclipse.jetty.io.WriteFlusher - update WriteFlusher@6053c444{IDLE}->null:WRITING-->IDLE
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpConnection - org.eclipse.jetty.server.HttpConnection$SendCallback@4f1213bf[PROCESSING][i=HTTP/1.1{s=200,h=2,cl=-1},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@d7f3574] generate: DONE ([p=160,l=160,c=8192,r=0],[p=939,l=939,c=32768,r=0],false)@COMMITTED
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpChannel - sendResponse info=null content=HeapByteBuffer@2ada9aa8[p=0,l=0,c=0,r=0]={<<<>>>} complete=true committing=false callback=Blocker@56100249{null}
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpConnection - org.eclipse.jetty.server.HttpConnection$SendCallback@4f1213bf[PROCESSING][i=null,cb=org.eclipse.jetty.server.HttpChannel$ContentCallback@39f0613e] generate: CONTINUE (null,[p=0,l=0,c=0,r=0],true)@COMPLETING
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpConnection - org.eclipse.jetty.server.HttpConnection$SendCallback@4f1213bf[PROCESSING][i=null,cb=org.eclipse.jetty.server.HttpChannel$ContentCallback@39f0613e] generate: NEED_CHUNK (null,[p=0,l=0,c=0,r=0],true)@COMPLETING
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpConnection - org.eclipse.jetty.server.HttpConnection$SendCallback@4f1213bf[PROCESSING][i=null,cb=org.eclipse.jetty.server.HttpChannel$ContentCallback@39f0613e] generate: FLUSH (null,[p=0,l=0,c=0,r=0],true)@COMPLETING
+DEBUG qtp604335532-19 org.eclipse.jetty.io.WriteFlusher - write: WriteFlusher@6053c444{IDLE}->null [HeapByteBuffer@1efffe27[p=0,l=7,c=1024,r=7]={<<<\r\n0\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}]
+DEBUG qtp604335532-19 org.eclipse.jetty.io.WriteFlusher - update WriteFlusher@6053c444{WRITING}->null:IDLE-->WRITING
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ChannelEndPoint - flushed 7 SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=W,to=4/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=END,0 of -1},g=HttpGenerator@68bed3d4{s=COMPLETING}]=>HttpChannelOverHttp@4803a361{r=3,c=true,a=DISPATCHED,uri=//localhost:4567/dashboard}
+DEBUG qtp604335532-19 org.eclipse.jetty.io.WriteFlusher - Flushed=true 7/7+0 WriteFlusher@6053c444{WRITING}->null
+DEBUG qtp604335532-19 org.eclipse.jetty.io.WriteFlusher - update WriteFlusher@6053c444{IDLE}->null:WRITING-->IDLE
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpConnection - org.eclipse.jetty.server.HttpConnection$SendCallback@4f1213bf[PROCESSING][i=null,cb=org.eclipse.jetty.server.HttpChannel$ContentCallback@39f0613e] generate: DONE (null,[p=0,l=0,c=0,r=0],true)@END
+DEBUG qtp604335532-19 org.eclipse.jetty.server.session - FinalSession=org.eclipse.jetty.server.session.Session@1326aff2 old_session_manager=null this=spark.embeddedserver.jetty.JettyHandler992421772==dftMaxIdleSec=-1
+DEBUG qtp604335532-19 org.eclipse.jetty.server.session - Store: id=node011rsxoe005h70dhv06cust9aq0, dirty=false, lsave=1587558806310, period=0, elapsed=50
+DEBUG qtp604335532-19 org.eclipse.jetty.server.session - Non passivating SessionDataStore, session in SessionCache only id=node011rsxoe005h70dhv06cust9aq0
+DEBUG qtp604335532-19 org.eclipse.jetty.server.Server - handled=true async=false committed=true on HttpChannelOverHttp@4803a361{r=3,c=true,a=DISPATCHED,uri=//localhost:4567/dashboard}
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpChannelState - unhandle HttpChannelState@513d6447{s=DISPATCHED a=NOT_ASYNC i=true r=IDLE w=false}
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@4803a361{r=3,c=true,a=COMPLETING,uri=//localhost:4567/dashboard} action COMPLETE
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpChannelState - onComplete HttpChannelState@513d6447{s=COMPLETING a=NOT_ASYNC i=false r=IDLE w=false}
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpChannel - COMPLETE for /dashboard written=939
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpChannelState - recycle HttpChannelState@513d6447{s=COMPLETED a=NOT_ASYNC i=false r=IDLE w=false}
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - reset HttpParser{s=END,0 of -1}
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - END --> START
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null} handle exit, result COMPLETE
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ChannelEndPoint - filled 0 SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=3/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ChannelEndPoint - filled 0 SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=3/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpConnection - HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=3/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null} filled 0 HeapByteBuffer@4c6a54f9[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 200 OK\r\n...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpConnection - HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=4/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null} parse HeapByteBuffer@4c6a54f9[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 200 OK\r\n...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - parseNext s=START HeapByteBuffer@4c6a54f9[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 200 OK\r\n...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpConnection - HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=5/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null} parsed false HttpParser{s=START,0 of -1}
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpConnection - releaseRequestBuffer HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=5/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-19 org.eclipse.jetty.io.AbstractConnection - fillInterested HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=6/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-19 org.eclipse.jetty.io.FillInterest - interested FillInterest@76fd874f{AC.ReadCB@57d3df39{HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=5/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}}}
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ChannelEndPoint - changeInterests p=false 0->1 for SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=5/3600000}{io=0/1,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ManagedSelector - Queued change CEP:SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=5/3600000}{io=0/1,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}:runUpdateKey:NON_BLOCKING on org.eclipse.jetty.io.ManagedSelector@616d08b5 id=1 keys=1 selected=0 actions=0
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpConnection - HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=6/3600000}{io=0/1,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null} onFillable exit HttpChannelState@513d6447{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false} null
+DEBUG qtp604335532-19 org.eclipse.jetty.util.thread.ReservedThreadExecutor - ReservedThreadExecutor@362cb952{s=2/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}@55a408fb waiting
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@1a56e0ac woken up from select, 0/1 selected
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@1a56e0ac processing 0 keys, 1 actions
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ManagedSelector - action=CEP:SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=10/3600000}{io=0/1,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}:runUpdateKey:NON_BLOCKING wakeup=false
+DEBUG qtp604335532-21 org.eclipse.jetty.util.thread.strategy.EatWhatYouKill - EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/PRODUCING/ReservedThreadExecutor@362cb952{s=2/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} t=CEP:SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=11/3600000}{io=0/1,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}:runUpdateKey:NON_BLOCKING/NON_BLOCKING
+DEBUG qtp604335532-21 org.eclipse.jetty.util.thread.strategy.EatWhatYouKill - EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/PRODUCING/ReservedThreadExecutor@362cb952{s=2/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} PC t=CEP:SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=12/3600000}{io=0/1,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}:runUpdateKey:NON_BLOCKING
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ChannelEndPoint - Key interests updated 0 -> 1 on SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=12/3600000}{io=1/1,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ManagedSelector - Forcing selection, actions=0
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ManagedSelector - action=null wakeup=false
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@1a56e0ac waiting on select
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@1a56e0ac woken up from select, 1/1 selected
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@1a56e0ac processing 1 keys, 0 actions
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ManagedSelector - selected channel=java.nio.channels.SocketChannel[connected local=/[0:0:0:0:0:0:0:1]:4567 remote=/[0:0:0:0:0:0:0:1]:54060], selector=sun.nio.ch.KQueueSelectorImpl@1a56e0ac, interestOps=1, readyOps=1 SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=1572/3600000}{io=1/1,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null} 
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ChannelEndPoint - onSelected 1->0 r=true w=false for SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=1574/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ChannelEndPoint - task CEP:SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=1574/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}:runFillable:BLOCKING
+DEBUG qtp604335532-21 org.eclipse.jetty.util.thread.strategy.EatWhatYouKill - EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/PRODUCING/ReservedThreadExecutor@362cb952{s=2/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} t=CEP:SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=1575/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}:runFillable:BLOCKING/BLOCKING
+DEBUG qtp604335532-21 org.eclipse.jetty.util.thread.ReservedThreadExecutor - ReservedThreadExecutor@362cb952{s=2/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} tryExecute EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/PRODUCING/ReservedThreadExecutor@362cb952{s=2/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+DEBUG qtp604335532-21 org.eclipse.jetty.util.thread.ReservedThreadExecutor - ReservedThreadExecutor@362cb952{s=1/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}@55a408fb offer EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/PRODUCING/ReservedThreadExecutor@362cb952{s=1/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+DEBUG qtp604335532-21 org.eclipse.jetty.util.thread.strategy.EatWhatYouKill - EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/IDLE/ReservedThreadExecutor@362cb952{s=1/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} EPC t=CEP:SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=1577/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}:runFillable:BLOCKING
+DEBUG qtp604335532-21 org.eclipse.jetty.io.FillInterest - fillable FillInterest@76fd874f{AC.ReadCB@57d3df39{HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=1577/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}}}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=1579/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null} onFillable enter HttpChannelState@513d6447{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false} null
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ChannelEndPoint - filled 1090 SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=1579/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-19 org.eclipse.jetty.util.thread.ReservedThreadExecutor - ReservedThreadExecutor@362cb952{s=1/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}@55a408fb task=EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/IDLE/ReservedThreadExecutor@362cb952{s=1/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+DEBUG qtp604335532-19 org.eclipse.jetty.util.thread.strategy.EatWhatYouKill - EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/IDLE/ReservedThreadExecutor@362cb952{s=1/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} run
+DEBUG qtp604335532-19 org.eclipse.jetty.util.thread.strategy.EatWhatYouKill - EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/IDLE/ReservedThreadExecutor@362cb952{s=1/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} produce
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ManagedSelector - action=null wakeup=false
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ChannelEndPoint - Key interests updated 1 -> 0 on SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=9/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@1a56e0ac waiting on select
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=0/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null} filled 1090 HeapByteBuffer@4c6a54f9[p=0,l=1090,c=8192,r=1090]={<<<GET /yourtrips? H...t9aq0.node0\r\n\r\n>>>v06cust9aq0.node0...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=10/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=3,c=false,a=IDLE,uri=null} parse HeapByteBuffer@4c6a54f9[p=0,l=1090,c=8192,r=1090]={<<<GET /yourtrips? H...t9aq0.node0\r\n\r\n>>>v06cust9aq0.node0...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - parseNext s=START HeapByteBuffer@4c6a54f9[p=0,l=1090,c=8192,r=1090]={<<<GET /yourtrips? H...t9aq0.node0\r\n\r\n>>>v06cust9aq0.node0...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - START --> SPACE1
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - SPACE1 --> URI
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - URI --> SPACE2
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - SPACE2 --> REQUEST_VERSION
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - REQUEST_VERSION --> HEADER
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:Host: localhost:4567 --> IN_VALUE
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:Host: localhost:4567 --> FIELD
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:Connection: keep-alive --> IN_VALUE
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:Connection: keep-alive --> FIELD
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_NAME
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> VALUE
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_VALUE
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> FIELD
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36 --> IN_VALUE
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36 --> FIELD
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_NAME
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> VALUE
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_VALUE
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> FIELD
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9 --> IN_VALUE
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9 --> FIELD
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_NAME
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> VALUE
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_VALUE
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> FIELD
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_NAME
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> VALUE
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_VALUE
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> FIELD
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_NAME
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> VALUE
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_VALUE
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> FIELD
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> VALUE
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_VALUE
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> FIELD
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:Accept-Encoding: gzip, deflate, br --> IN_VALUE
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:Accept-Encoding: gzip, deflate, br --> FIELD
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:Accept-Language: en-GB,en-US;q=0.9,en;q=0.8 --> IN_VALUE
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:Accept-Language: en-GB,en-US;q=0.9,en;q=0.8 --> FIELD
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> VALUE
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_VALUE
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER:null --> FIELD
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - HEADER --> END
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpChannel - REQUEST for //localhost:4567/yourtrips? on HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=//localhost:4567/yourtrips?}
+GET //localhost:4567/yourtrips? HTTP/1.1
+Host: localhost:4567
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36
 Sec-Fetch-Dest: document
 Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
 Sec-Fetch-Site: same-origin
 Sec-Fetch-Mode: navigate
 Sec-Fetch-User: ?1
+Referer: http://localhost:4567/dashboard
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: rack.session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVG86HVJhY2s6OlNlc3Npb246OlNlc3Npb25JZAY6D0BwdWJsaWNfaWRJIkVmMDA4Y2ZhNjM0YzIxNTIyMTJiNmMxNmE2NjQwMWZhODIyZGY0Y2RmNDMwZWQ1ZmJlZDQ3OGJjMzZmYmExNzI2BjsARkkiCWNzcmYGOwBGSSIxb09Db0hRQlFWSGQ4VTdDeFhYKzJaSUtCMkYvem9qdDRXMVJvbitHQ0ovMD0GOwBGSSINdHJhY2tpbmcGOwBGewZJIhRIVFRQX1VTRVJfQUdFTlQGOwBUSSItOGJhYmNmZmM1NWE5ZjRlYjJjZWUzODU5YWIwMzEzMzU5MTg4MzMyZgY7AEY%3D--ec6db0d0aa0e36466c48874a079fb977f89da024; JSESSIONID=node011rsxoe005h70dhv06cust9aq0.node0
+
+
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=//localhost:4567/yourtrips?} onContentComplete
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=//localhost:4567/yourtrips?} onRequestComplete
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpInput - HttpInputOverHTTP@4ace0c63[c=0,q=0,[0]=null,s=STREAM] addContent EOF
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - HttpConnection@57d3df39[p=HttpParser{s=END,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=//localhost:4567/yourtrips?}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=19/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=END,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=//localhost:4567/yourtrips?} parsed true HttpParser{s=END,0 of -1}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - releaseRequestBuffer HttpConnection@57d3df39[p=HttpParser{s=END,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=//localhost:4567/yourtrips?}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=19/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=END,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=//localhost:4567/yourtrips?}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=//localhost:4567/yourtrips?} handle //localhost:4567/yourtrips? 
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpChannelState - handling HttpChannelState@513d6447{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@4803a361{r=4,c=false,a=DISPATCHED,uri=//localhost:4567/yourtrips?} action DISPATCH
+DEBUG qtp604335532-21 org.eclipse.jetty.server.Server - REQUEST GET /yourtrips on HttpChannelOverHttp@4803a361{r=4,c=false,a=DISPATCHED,uri=//localhost:4567/yourtrips?}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.session - Got Session ID node011rsxoe005h70dhv06cust9aq0.node0 from cookie
+DEBUG qtp604335532-21 org.eclipse.jetty.server.session - Testing expiry on session node011rsxoe005h70dhv06cust9aq0: expires at 0 now 1587558807965 maxIdle -1
+DEBUG qtp604335532-21 org.eclipse.jetty.server.session - Testing expiry on session node011rsxoe005h70dhv06cust9aq0: expires at 0 now 1587558807966 maxIdle -1
+DEBUG qtp604335532-21 org.eclipse.jetty.server.session - sessionHandler=spark.embeddedserver.jetty.JettyHandler992421772==dftMaxIdleSec=-1
+DEBUG qtp604335532-21 org.eclipse.jetty.server.session - session=org.eclipse.jetty.server.session.Session@1326aff2
+DEBUG qtp604335532-21 org.sql2o.Query - total: 31 ms, execution: 13 ms, reading and parsing: 18 ms; executed [null]
+DEBUG qtp604335532-21 org.sql2o.Query - total: 9 ms, execution: 9 ms, reading and parsing: 0 ms; executed [null]
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpChannel - sendResponse info=null content=DirectByteBuffer@24a61c84[p=0,l=1553,c=32768,r=1553]={<<<<!DOCTYPE html>\n<...</body>\n</html>>>>ion="/login">\n  <...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} complete=false committing=true callback=Blocker@56100249{null}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpChannel - COMMIT for /yourtrips on HttpChannelOverHttp@4803a361{r=4,c=true,a=DISPATCHED,uri=//localhost:4567/yourtrips?}
+200 null HTTP/1.1
+Date: Wed, 22 Apr 2020 12:33:27 GMT
+Content-Type: text/html;charset=utf-8
+
+
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - org.eclipse.jetty.server.HttpConnection$SendCallback@4f1213bf[PROCESSING][i=HTTP/1.1{s=200,h=2,cl=-1},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@48d878d6] generate: NEED_HEADER (null,[p=0,l=1553,c=32768,r=1553],false)@START
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpGenerator - generateHeaders HTTP/1.1{s=200,h=2,cl=-1} last=false content=DirectByteBuffer@24a61c84[p=0,l=1553,c=32768,r=1553]={<<<<!DOCTYPE html>\n<...</body>\n</html>>>>ion="/login">\n  <...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpGenerator - Date: Wed, 22 Apr 2020 12:33:27 GMT
+Content-Type: text/html;charset=utf-8
+
+
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpGenerator - CHUNKED_CONTENT
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - org.eclipse.jetty.server.HttpConnection$SendCallback@4f1213bf[PROCESSING][i=HTTP/1.1{s=200,h=2,cl=-1},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@48d878d6] generate: FLUSH ([p=0,l=160,c=8192,r=160],[p=0,l=1553,c=32768,r=1553],false)@COMMITTED
+DEBUG qtp604335532-21 org.eclipse.jetty.io.WriteFlusher - write: WriteFlusher@6053c444{IDLE}->null [HeapByteBuffer@4c6a54f9[p=0,l=160,c=8192,r=160]={<<<HTTP/1.1 200 OK\r\n...71121)\r\n\r\n611\r\n>>>) AppleWebKit/537...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00},DirectByteBuffer@24a61c84[p=0,l=1553,c=32768,r=1553]={<<<<!DOCTYPE html>\n<...</body>\n</html>>>>ion="/login">\n  <...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}]
+DEBUG qtp604335532-21 org.eclipse.jetty.io.WriteFlusher - update WriteFlusher@6053c444{WRITING}->null:IDLE-->WRITING
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ChannelEndPoint - flushed 1713 SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=W,to=158/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=END,0 of -1},g=HttpGenerator@68bed3d4{s=COMMITTED}]=>HttpChannelOverHttp@4803a361{r=4,c=true,a=DISPATCHED,uri=//localhost:4567/yourtrips?}
+DEBUG qtp604335532-21 org.eclipse.jetty.io.WriteFlusher - Flushed=true 160/160+1 WriteFlusher@6053c444{WRITING}->null
+DEBUG qtp604335532-21 org.eclipse.jetty.io.WriteFlusher - update WriteFlusher@6053c444{IDLE}->null:WRITING-->IDLE
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - org.eclipse.jetty.server.HttpConnection$SendCallback@4f1213bf[PROCESSING][i=HTTP/1.1{s=200,h=2,cl=-1},cb=org.eclipse.jetty.server.HttpChannel$CommitCallback@48d878d6] generate: DONE ([p=160,l=160,c=8192,r=0],[p=1553,l=1553,c=32768,r=0],false)@COMMITTED
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpChannel - sendResponse info=null content=HeapByteBuffer@2ada9aa8[p=0,l=0,c=0,r=0]={<<<>>>} complete=true committing=false callback=Blocker@56100249{null}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - org.eclipse.jetty.server.HttpConnection$SendCallback@4f1213bf[PROCESSING][i=null,cb=org.eclipse.jetty.server.HttpChannel$ContentCallback@930b167] generate: CONTINUE (null,[p=0,l=0,c=0,r=0],true)@COMPLETING
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - org.eclipse.jetty.server.HttpConnection$SendCallback@4f1213bf[PROCESSING][i=null,cb=org.eclipse.jetty.server.HttpChannel$ContentCallback@930b167] generate: NEED_CHUNK (null,[p=0,l=0,c=0,r=0],true)@COMPLETING
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - org.eclipse.jetty.server.HttpConnection$SendCallback@4f1213bf[PROCESSING][i=null,cb=org.eclipse.jetty.server.HttpChannel$ContentCallback@930b167] generate: FLUSH (null,[p=0,l=0,c=0,r=0],true)@COMPLETING
+DEBUG qtp604335532-21 org.eclipse.jetty.io.WriteFlusher - write: WriteFlusher@6053c444{IDLE}->null [HeapByteBuffer@1efffe27[p=0,l=7,c=1024,r=7]={<<<\r\n0\r\n\r\n>>>\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}]
+DEBUG qtp604335532-21 org.eclipse.jetty.io.WriteFlusher - update WriteFlusher@6053c444{WRITING}->null:IDLE-->WRITING
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ChannelEndPoint - flushed 7 SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=W,to=3/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=END,0 of -1},g=HttpGenerator@68bed3d4{s=COMPLETING}]=>HttpChannelOverHttp@4803a361{r=4,c=true,a=DISPATCHED,uri=//localhost:4567/yourtrips?}
+DEBUG qtp604335532-21 org.eclipse.jetty.io.WriteFlusher - Flushed=true 7/7+0 WriteFlusher@6053c444{WRITING}->null
+DEBUG qtp604335532-21 org.eclipse.jetty.io.WriteFlusher - update WriteFlusher@6053c444{IDLE}->null:WRITING-->IDLE
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - org.eclipse.jetty.server.HttpConnection$SendCallback@4f1213bf[PROCESSING][i=null,cb=org.eclipse.jetty.server.HttpChannel$ContentCallback@930b167] generate: DONE (null,[p=0,l=0,c=0,r=0],true)@END
+DEBUG qtp604335532-21 org.eclipse.jetty.server.session - FinalSession=org.eclipse.jetty.server.session.Session@1326aff2 old_session_manager=null this=spark.embeddedserver.jetty.JettyHandler992421772==dftMaxIdleSec=-1
+DEBUG qtp604335532-21 org.eclipse.jetty.server.session - Store: id=node011rsxoe005h70dhv06cust9aq0, dirty=false, lsave=1587558806360, period=0, elapsed=1749
+DEBUG qtp604335532-21 org.eclipse.jetty.server.session - Non passivating SessionDataStore, session in SessionCache only id=node011rsxoe005h70dhv06cust9aq0
+DEBUG qtp604335532-21 org.eclipse.jetty.server.Server - handled=true async=false committed=true on HttpChannelOverHttp@4803a361{r=4,c=true,a=DISPATCHED,uri=//localhost:4567/yourtrips?}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpChannelState - unhandle HttpChannelState@513d6447{s=DISPATCHED a=NOT_ASYNC i=true r=IDLE w=false}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@4803a361{r=4,c=true,a=COMPLETING,uri=//localhost:4567/yourtrips?} action COMPLETE
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpChannelState - onComplete HttpChannelState@513d6447{s=COMPLETING a=NOT_ASYNC i=false r=IDLE w=false}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpChannel - COMPLETE for /yourtrips written=1553
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpChannelState - recycle HttpChannelState@513d6447{s=COMPLETED a=NOT_ASYNC i=false r=IDLE w=false}
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - reset HttpParser{s=END,0 of -1}
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - END --> START
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null} handle exit, result COMPLETE
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ChannelEndPoint - filled 0 SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=6/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ChannelEndPoint - filled 0 SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=7/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=7/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null} filled 0 HeapByteBuffer@4c6a54f9[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 200 OK\r\n...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=8/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null} parse HeapByteBuffer@4c6a54f9[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 200 OK\r\n...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+DEBUG qtp604335532-21 org.eclipse.jetty.http.HttpParser - parseNext s=START HeapByteBuffer@4c6a54f9[p=0,l=0,c=8192,r=0]={<<<>>>HTTP/1.1 200 OK\r\n...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=8/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null} parsed false HttpParser{s=START,0 of -1}
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - releaseRequestBuffer HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=9/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-21 org.eclipse.jetty.io.AbstractConnection - fillInterested HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=11/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-21 org.eclipse.jetty.io.FillInterest - interested FillInterest@76fd874f{AC.ReadCB@57d3df39{HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=0/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}}}
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ChannelEndPoint - changeInterests p=false 0->1 for SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=0/3600000}{io=0/1,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ManagedSelector - Queued change CEP:SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=0/3600000}{io=0/1,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}:runUpdateKey:NON_BLOCKING on org.eclipse.jetty.io.ManagedSelector@616d08b5 id=1 keys=1 selected=0 actions=0
+DEBUG qtp604335532-21 org.eclipse.jetty.server.HttpConnection - HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=1/3600000}{io=0/1,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null} onFillable exit HttpChannelState@513d6447{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false} null
+DEBUG qtp604335532-21 org.eclipse.jetty.util.thread.ReservedThreadExecutor - ReservedThreadExecutor@362cb952{s=2/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}@461a2d0d waiting
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@1a56e0ac woken up from select, 0/1 selected
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@1a56e0ac processing 0 keys, 1 actions
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ManagedSelector - action=CEP:SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=4/3600000}{io=0/1,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}:runUpdateKey:NON_BLOCKING wakeup=false
+DEBUG qtp604335532-19 org.eclipse.jetty.util.thread.strategy.EatWhatYouKill - EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/PRODUCING/ReservedThreadExecutor@362cb952{s=2/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} t=CEP:SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=4/3600000}{io=0/1,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}:runUpdateKey:NON_BLOCKING/NON_BLOCKING
+DEBUG qtp604335532-19 org.eclipse.jetty.util.thread.strategy.EatWhatYouKill - EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/PRODUCING/ReservedThreadExecutor@362cb952{s=2/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} PC t=CEP:SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=12/3600000}{io=0/1,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}:runUpdateKey:NON_BLOCKING
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ChannelEndPoint - Key interests updated 0 -> 1 on SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=12/3600000}{io=1/1,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ManagedSelector - Forcing selection, actions=0
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ManagedSelector - action=null wakeup=false
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@1a56e0ac waiting on select
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@1a56e0ac woken up from select, 1/1 selected
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@1a56e0ac processing 1 keys, 0 actions
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ManagedSelector - selected channel=java.nio.channels.SocketChannel[connected local=/[0:0:0:0:0:0:0:1]:4567 remote=/[0:0:0:0:0:0:0:1]:54060], selector=sun.nio.ch.KQueueSelectorImpl@1a56e0ac, interestOps=1, readyOps=1 SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=9583/3600000}{io=1/1,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null} 
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ChannelEndPoint - onSelected 1->0 r=true w=false for SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=9583/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ChannelEndPoint - task CEP:SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=9584/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}:runFillable:BLOCKING
+DEBUG qtp604335532-19 org.eclipse.jetty.util.thread.strategy.EatWhatYouKill - EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/PRODUCING/ReservedThreadExecutor@362cb952{s=2/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} t=CEP:SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=9587/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}:runFillable:BLOCKING/BLOCKING
+DEBUG qtp604335532-19 org.eclipse.jetty.util.thread.ReservedThreadExecutor - ReservedThreadExecutor@362cb952{s=2/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} tryExecute EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/PRODUCING/ReservedThreadExecutor@362cb952{s=2/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+DEBUG qtp604335532-19 org.eclipse.jetty.util.thread.ReservedThreadExecutor - ReservedThreadExecutor@362cb952{s=1/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}@461a2d0d offer EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/PRODUCING/ReservedThreadExecutor@362cb952{s=1/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+DEBUG qtp604335532-19 org.eclipse.jetty.util.thread.strategy.EatWhatYouKill - EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/IDLE/ReservedThreadExecutor@362cb952{s=1/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} EPC t=CEP:SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=9588/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}:runFillable:BLOCKING
+DEBUG qtp604335532-19 org.eclipse.jetty.io.FillInterest - fillable FillInterest@76fd874f{AC.ReadCB@57d3df39{HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=FI,flush=-,to=9588/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}}}
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpConnection - HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=9589/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null} onFillable enter HttpChannelState@513d6447{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false} null
+DEBUG qtp604335532-19 org.eclipse.jetty.io.ChannelEndPoint - filled 1105 SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=9589/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpConnection - HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=0/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null} filled 1105 HeapByteBuffer@4c6a54f9[p=0,l=1105,c=8192,r=1105]={<<<GET /schedule?tri...t9aq0.node0\r\n\r\n>>>e0\r\n\r\nD--ec6db0d0...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpConnection - HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=1/3600000}{io=1/0,kio=1,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=START,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null} parse HeapByteBuffer@4c6a54f9[p=0,l=1105,c=8192,r=1105]={<<<GET /schedule?tri...t9aq0.node0\r\n\r\n>>>e0\r\n\r\nD--ec6db0d0...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} {}
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - parseNext s=START HeapByteBuffer@4c6a54f9[p=0,l=1105,c=8192,r=1105]={<<<GET /schedule?tri...t9aq0.node0\r\n\r\n>>>e0\r\n\r\nD--ec6db0d0...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - START --> SPACE1
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - SPACE1 --> URI
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - URI --> SPACE2
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - SPACE2 --> REQUEST_VERSION
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - REQUEST_VERSION --> HEADER
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:Host: localhost:4567 --> IN_VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:Host: localhost:4567 --> FIELD
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:Connection: keep-alive --> IN_VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:Connection: keep-alive --> FIELD
+DEBUG qtp604335532-21 org.eclipse.jetty.util.thread.ReservedThreadExecutor - ReservedThreadExecutor@362cb952{s=1/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}@461a2d0d task=EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/IDLE/ReservedThreadExecutor@362cb952{s=1/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567}
+DEBUG qtp604335532-21 org.eclipse.jetty.util.thread.strategy.EatWhatYouKill - EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/IDLE/ReservedThreadExecutor@362cb952{s=1/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} run
+DEBUG qtp604335532-21 org.eclipse.jetty.util.thread.strategy.EatWhatYouKill - EatWhatYouKill@b2dac1e/SelectorProducer@2326dd97/IDLE/ReservedThreadExecutor@362cb952{s=1/4,p=0}@SelectorManager@ServerConnector@1222659c{HTTP/1.1,[http/1.1]}{0.0.0.0:4567} produce
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ManagedSelector - action=null wakeup=false
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_NAME
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> FIELD
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36 --> IN_VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36 --> FIELD
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_NAME
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> FIELD
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9 --> IN_VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9 --> FIELD
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_NAME
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ChannelEndPoint - Key interests updated 1 -> 0 on SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=4/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=HEADER,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=4,c=false,a=IDLE,uri=null}
+DEBUG qtp604335532-21 org.eclipse.jetty.io.ManagedSelector - Selector sun.nio.ch.KQueueSelectorImpl@1a56e0ac waiting on select
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> FIELD
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_NAME
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> FIELD
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_NAME
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> FIELD
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> FIELD
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:Accept-Encoding: gzip, deflate, br --> IN_VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:Accept-Encoding: gzip, deflate, br --> FIELD
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:Accept-Language: en-GB,en-US;q=0.9,en;q=0.8 --> IN_VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:Accept-Language: en-GB,en-US;q=0.9,en;q=0.8 --> FIELD
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> IN_VALUE
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER:null --> FIELD
+DEBUG qtp604335532-19 org.eclipse.jetty.http.HttpParser - HEADER --> END
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpChannel - REQUEST for //localhost:4567/schedule?trip_name=weds1 on HttpChannelOverHttp@4803a361{r=5,c=false,a=IDLE,uri=//localhost:4567/schedule?trip_name=weds1}
+GET //localhost:4567/schedule?trip_name=weds1 HTTP/1.1
+Host: localhost:4567
+Connection: keep-alive
+Upgrade-Insecure-Requests: 1
+User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/80.0.3987.122 Safari/537.36
+
+Sec-Fetch-Dest: document
+Accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9
+Sec-Fetch-Site: same-origin
+Sec-Fetch-Mode: navigate
+Sec-Fetch-User: ?1
+
 Referer: http://localhost:4567/login
 Accept-Encoding: gzip, deflate, br
 Accept-Language: en-US,en;q=0.9
@@ -518,3 +1001,28 @@ DEBUG qtp773599251-21 org.eclipse.jetty.http.HttpParser - END --> START
 DEBUG qtp773599251-21 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@33d54e36{r=3,c=false,a=IDLE,uri=null} handle exit, result COMPLETE
 DEBUG qtp773599251-21 org.eclipse.jetty.io.ChannelEndPoint - filled 1469 SocketChannelEndPoint@47c85012{/[0:0:0:0:0:0:0:1]:65296<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=13/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@259e112c[p=HttpParser{s=START,0 of -1},g=HttpGenerator@5e74e9cf{s=START}]=>HttpChannelOverHttp@33d54e36{r=3,c=false,a=IDLE,uri=null}
 DEBUG qtp773599251-21 org.eclipse.jetty.server.HttpConnection - HttpConnection@259e112c[p=HttpParser{s=START,0 of -1},g=HttpGenerator@5e74e9cf{s=START}]=>HttpChannelOverHttp@33d54e36{r=3,c=false,a=IDLE,uri=null}<-SocketChannelEndPoint@47c85012{/[0:0:0:0:0:0:0:1]:65296<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=0/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@259e112c[p=HttpParser{s=START,0 of -1},g=HttpGenerator@5e74e9cf{s=START}]=>HttpChannelOverHttp@33d54e36{r=3,c=false,a=IDLE,uri=null} filled 1469 HeapByteBuffer@7fce6258[p=0,l=1469,c=8192,r=1469]={<<<GET /dashboard HT...0n220.node0\r\n\r\n>>>W--85f1818830fb86...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00}
+
+Referer: http://localhost:4567/yourtrips?
+Accept-Encoding: gzip, deflate, br
+Accept-Language: en-GB,en-US;q=0.9,en;q=0.8
+Cookie: rack.session=BAh7CEkiD3Nlc3Npb25faWQGOgZFVG86HVJhY2s6OlNlc3Npb246OlNlc3Npb25JZAY6D0BwdWJsaWNfaWRJIkVmMDA4Y2ZhNjM0YzIxNTIyMTJiNmMxNmE2NjQwMWZhODIyZGY0Y2RmNDMwZWQ1ZmJlZDQ3OGJjMzZmYmExNzI2BjsARkkiCWNzcmYGOwBGSSIxb09Db0hRQlFWSGQ4VTdDeFhYKzJaSUtCMkYvem9qdDRXMVJvbitHQ0ovMD0GOwBGSSINdHJhY2tpbmcGOwBGewZJIhRIVFRQX1VTRVJfQUdFTlQGOwBUSSItOGJhYmNmZmM1NWE5ZjRlYjJjZWUzODU5YWIwMzEzMzU5MTg4MzMyZgY7AEY%3D--ec6db0d0aa0e36466c48874a079fb977f89da024; JSESSIONID=node011rsxoe005h70dhv06cust9aq0.node0
+
+
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@4803a361{r=5,c=false,a=IDLE,uri=//localhost:4567/schedule?trip_name=weds1} onContentComplete
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@4803a361{r=5,c=false,a=IDLE,uri=//localhost:4567/schedule?trip_name=weds1} onRequestComplete
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpInput - HttpInputOverHTTP@4ace0c63[c=0,q=0,[0]=null,s=STREAM] addContent EOF
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpConnection - HttpConnection@57d3df39[p=HttpParser{s=END,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=5,c=false,a=IDLE,uri=//localhost:4567/schedule?trip_name=weds1}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=14/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=END,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=5,c=false,a=IDLE,uri=//localhost:4567/schedule?trip_name=weds1} parsed true HttpParser{s=END,0 of -1}
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpConnection - releaseRequestBuffer HttpConnection@57d3df39[p=HttpParser{s=END,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=5,c=false,a=IDLE,uri=//localhost:4567/schedule?trip_name=weds1}<-SocketChannelEndPoint@2d2f06c0{/[0:0:0:0:0:0:0:1]:54060<->/[0:0:0:0:0:0:0:1]:4567,OPEN,fill=-,flush=-,to=14/3600000}{io=0/0,kio=0,kro=1}->HttpConnection@57d3df39[p=HttpParser{s=END,0 of -1},g=HttpGenerator@68bed3d4{s=START}]=>HttpChannelOverHttp@4803a361{r=5,c=false,a=IDLE,uri=//localhost:4567/schedule?trip_name=weds1}
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@4803a361{r=5,c=false,a=IDLE,uri=//localhost:4567/schedule?trip_name=weds1} handle //localhost:4567/schedule?trip_name=weds1 
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpChannelState - handling HttpChannelState@513d6447{s=IDLE a=NOT_ASYNC i=true r=IDLE w=false}
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpChannel - HttpChannelOverHttp@4803a361{r=5,c=false,a=DISPATCHED,uri=//localhost:4567/schedule?trip_name=weds1} action DISPATCH
+DEBUG qtp604335532-19 org.eclipse.jetty.server.Server - REQUEST GET /schedule on HttpChannelOverHttp@4803a361{r=5,c=false,a=DISPATCHED,uri=//localhost:4567/schedule?trip_name=weds1}
+DEBUG qtp604335532-19 org.eclipse.jetty.server.session - Got Session ID node011rsxoe005h70dhv06cust9aq0.node0 from cookie
+DEBUG qtp604335532-19 org.eclipse.jetty.server.session - Testing expiry on session node011rsxoe005h70dhv06cust9aq0: expires at 0 now 1587558817723 maxIdle -1
+DEBUG qtp604335532-19 org.eclipse.jetty.server.session - Testing expiry on session node011rsxoe005h70dhv06cust9aq0: expires at 0 now 1587558817724 maxIdle -1
+DEBUG qtp604335532-19 org.eclipse.jetty.server.session - sessionHandler=spark.embeddedserver.jetty.JettyHandler992421772==dftMaxIdleSec=-1
+DEBUG qtp604335532-19 org.eclipse.jetty.server.session - session=org.eclipse.jetty.server.session.Session@1326aff2
+DEBUG qtp604335532-19 org.sql2o.Query - total: 8 ms, execution: 8 ms, reading and parsing: 0 ms; executed [null]
+DEBUG qtp604335532-19 org.sql2o.Query - total: 3 ms, execution: 2 ms, reading and parsing: 1 ms; executed [null]
+DEBUG qtp604335532-19 org.eclipse.jetty.server.HttpChannel - sendResponse info=null content=DirectByteBuffer@24a61c84[p=0,l=774,c=32768,r=774]={<<<\n<!DOCTYPE html>\n...ody>\n</html>\n\n\n>>>  <button type="s...\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00\x00} complete=false committing=true callback=Blocker@56100249{null}
+

@@ -16,6 +16,8 @@
             Trip name: $trips.trip_name,
             Destination: $trips.destination,
             Hotel name: $trips.hotel_name
+            <form method="get" action="/schedule">
+            <button type="submit" name="trip_name" value=$trips.trip_name class="btn btn-primary" >View</button>
            #end
            </form>
         </tbody>

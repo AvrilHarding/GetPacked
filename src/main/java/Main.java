@@ -66,6 +66,8 @@ public class Main {
         get("/dashboard", (req, res) -> {
 //            HashMap dashboard = new HashMap();
             String username = req.session().attribute("username");
+            System.out.println(username);
+            System.out.println("111111111");
             return new ModelAndView(new HashMap(), "templates/dashboard.vtl");
         }, new VelocityTemplateEngine());
 
@@ -109,9 +111,15 @@ public class Main {
         });
 
         get("/yourtrips", (req, res) -> {
-            model.getAllTrips();
+
+            String username = req.session().attribute("username");
+            System.out.println(username);
+            System.out.println("222222222");
+            model.getAllTrips(username);
+            System.out.println(username);
+            System.out.println("333333333");
             HashMap trips = new HashMap();
-            trips.put("trips", model.getAllTrips());
+            trips.put("trips", model.getAllTrips(username));
             return new ModelAndView(trips, "templates/yourtrips.vtl");
         }, new VelocityTemplateEngine());
 
@@ -138,12 +146,21 @@ public class Main {
 
 
         get("/schedule", (req, res) -> {
-            model.getSchedule();
-            HashMap schedules = new HashMap();
-            schedules.put("schedules", model.getSchedule());
-            return new ModelAndView(schedules, "templates/schedule.vtl");
-        }, new VelocityTemplateEngine());
-        
+            if (req.queryParams("trip_name") == null) {
+            String trip_name = req.session().attribute("trip_name");
+            model.getOneSchedule(trip_name);
+            HashMap schedule = new HashMap();
+            schedule.put("schedules", model.getOneSchedule(trip_name));
+            return new ModelAndView(schedule, "templates/schedule.vtl");
+        } else {
+                String trip_name = req.queryParams("trip_name");
+                model.getOneSchedule(trip_name);
+                HashMap schedule = new HashMap();
+                schedule.put("schedules", model.getOneSchedule(trip_name));
+                return new ModelAndView(schedule, "templates/schedule.vtl");
+            }}
+            , new VelocityTemplateEngine());
+
 
     }
 }
