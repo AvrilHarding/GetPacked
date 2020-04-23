@@ -64,11 +64,10 @@ public class Main {
 
 
         get("/dashboard", (req, res) -> {
-//            HashMap dashboard = new HashMap();
+            HashMap dashboard = new HashMap();
             String username = req.session().attribute("username");
-            System.out.println(username);
-            System.out.println("111111111");
-            return new ModelAndView(new HashMap(), "templates/dashboard.vtl");
+            dashboard.put("name", username);
+            return new ModelAndView(dashboard, "templates/dashboard.vtl");
         }, new VelocityTemplateEngine());
 
 
