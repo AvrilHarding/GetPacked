@@ -48,31 +48,63 @@
          color: white;
        }
 
+        ul.no-bullets {
+          list-style-type: none;
+          margin: 0;
+          padding: 0;
+        }
+
+ .btn {
+          background-color: white;
+          border: none;
+          border-radius: 5px
+          color: black;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+
+        }
+
+        .btn:hover {
+            background-color: #71b7e3;
+        }
+
+
   </style>
 
   <body>
+
  <article>
 
-<h1>Schedule for
+
+<h1>Your schedule for
     #foreach( $schedules in $schedules )
         #if( $foreach.count > 1 )
             #break
         #end
-     $schedules.trip_name
+     $schedules.trip_name trip
     #end
 </h1>
 
+    <h3>Restaurants</h3>
     #foreach( $schedules in $schedules )
-    <p>Restaurant</p>
+    <ul class="no-bullets">
     <li>$!schedules.restaurant_name </li>
-    <p>Activity</p>
+    #end
+    <br><br>
+    <h3>Activities</h3>
+    #foreach( $schedules in $schedules )
     <li>$!schedules.activity_name </li>
      #end
+     </ul>
   </article>
 
+<br><br>
 <div class="buttons">
 <form method="get" action="/dashboard">
-<button type="submit" value="Submit">Back to dashboard</button>
+<button class="btn btn-outline-info" type="submit" value="Submit">Back to dashboard</button>
 </form>
 </div>
 
