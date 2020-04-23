@@ -57,21 +57,32 @@
     <h1>Pick your Hotel & room choice. Select occupancy and dates!</h1>
 
 
-      <table class="table table-hover">
-
+      <table class="table table-hover table-sm">
+    <thead>
+                     <tr>
+                       <th scope="col" class="text-center" >Hotel name</th>
+                       <th scope="col" class="text-center" >Description</th>
+                       <th scope="col" class="text-center" >Room type</th>
+                       <th scope="col" class="text-center" >Room occupancy limit</th>
+                       <th scope="col" class="text-center" >Price per person per night</th>
+                       <th scope="col" class="text-center" >Star rating</th>
+                       <th scope="col" class="text-center" >Destination</th>
+                   </tr>
+                   </thead>
+                   <form method="post" action="/pickhotel">
         <tbody>
           #foreach( $hotel in $hotel )
           <tr>
-            <th scope="row">
-            Hotel name: $hotel.hotel_name,
-            Description: $hotel.hotel_descr,
-            Room type: $hotel.room_name,
-            Room occupancy: $hotel.room_occupancy_limit,
-            Room Price Pp/Pn: $hotel.price_pppn,
-            Star Rating: $hotel.hotel_star_rating,
-            Destination: $hotel.destination,
-            <form method="post" action="/pickhotel">
-            <button type="submit" name="hotel_name" value=$hotel.hotel_name class="btn btn-primary" >Approve</button>
+            <tr>
+            <td> $hotel.hotel_name </td>
+            <td> $hotel.hotel_descr </td>
+            <td> $hotel.room_name </td>
+            <td> $hotel.room_occupancy_limit </td>
+            <td> $hotel.price_pppn </td>
+            <td> $hotel.hotel_star_rating </td>
+            <td> $hotel.destination </td>
+            <td>
+            <button type="submit" name="hotel_name" value=$hotel.hotel_name class="btn btn-primary" >Select</button>
            #end
            </form>
         </tbody>

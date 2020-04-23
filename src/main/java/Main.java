@@ -25,7 +25,6 @@ public class Main {
 
         Sql2o sql2o = new Sql2o("jdbc:postgresql://localhost:5432/" + dbName, null, null, new PostgresQuirks() {
             {
-                // make sure we use default UUID converter.
                 converters.put(UUID.class, new UUIDConverter());
             }
         });
@@ -34,7 +33,6 @@ public class Main {
 
 
         get("/", (req, res) -> {
-//            HashMap dashboard = new HashMap();
             return new ModelAndView(new HashMap(), "templates/homepage.vtl");
         }, new VelocityTemplateEngine());
 
@@ -50,7 +48,6 @@ public class Main {
         });
 
         get("/login", (req, res) -> {
-//            HashMap dashboard = new HashMap();
             return new ModelAndView(new HashMap(), "templates/login.vtl");
         }, new VelocityTemplateEngine());
 
@@ -72,8 +69,6 @@ public class Main {
 
 
         get("/newtrip", (req, res) -> {
-//            HashMap trip = new HashMap();
-            String username =  req.session().attribute("username");
             return new ModelAndView(new HashMap(), "templates/newtrip.vtl");
         }, new VelocityTemplateEngine());
 
@@ -82,11 +77,7 @@ public class Main {
             String trip_name = request.queryParams("trip_name_1");
             String destination = request.queryParams("destination");
             String username = request.session().attribute("username");
-            String hotel_name = null;
-            String restaurant_name = null;
-            String activity_name = null;
             model.createTrip(trip_name, destination, username);
-//            model.createSchedule(trip_name, restaurant_name, activity_name);
             request.session().attribute("trip_name", trip_name);
             request.session().attribute("destination", destination);
             response.redirect("/pickhotel");
@@ -110,7 +101,6 @@ public class Main {
         });
 
         get("/yourtrips", (req, res) -> {
-
             String username = req.session().attribute("username");
             model.getAllTrips(username);
             HashMap trips = new HashMap();
@@ -120,11 +110,9 @@ public class Main {
 
 
         get("/entertainment", (req, res) -> {
-            String trip_name = req.session().attribute("trip_name");
             HashMap restaurants_and_activities = new HashMap();
             restaurants_and_activities.put("restaurants", model.getAllRestaurants(req.session().attribute("destination")));
             restaurants_and_activities.put("activities", model.getAllActivities(req.session().attribute("destination")));
-//            restaurants_and_activities.put("schedules", model.getSchedule());
             return new ModelAndView(restaurants_and_activities,  "templates/entertainment.vtl");
         }, new VelocityTemplateEngine());
 
@@ -132,7 +120,6 @@ public class Main {
             String[] restaurant_name = request.queryParamsValues("restaurant_name");
             String trip_name = request.session().attribute("trip_name");
             String[] activity_name = request.queryParamsValues("activity_name");
-            System.out.println(restaurant_name);
             model.addRestaurants(restaurant_name, trip_name);
             model.addActivities(activity_name, trip_name);
             response.redirect("/schedule");
