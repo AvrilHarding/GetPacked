@@ -21,7 +21,13 @@
          font-family: 'Baloo Bhaina 2', cursive;
          align-items: center:
          align: center;
+         background-color: #b9d0ed;
      }
+
+    header {
+       background-image: url("https://lh3.googleusercontent.com/vv6yj2uOmU2kH8yvwlZqRIazdQiRfJhP0HNGheqbN8lLZD0ooXMYzTOTf_1qRUhsXRNfAuvaDa7B7UQn0QsqDUinAiNfLAOdIUNX4oAn45Lvuk_AR3jAjPsDXf6FY_6PyHYcGcRNbrodvtk33WU44n3Uulm9ONIlt8vZWcB42ZOJcEGSUoISAGlaGs9y_PmEZ8yq8tFX8HZ4gqSrMZ6cqvK3zygzxpOA8iWj84wpXTqK-OE3ceU2KNfTO4RLrXjEyCATWbr5ORmMhMNcP0kY1XXtJh8CD_SrpH5c51Pg0RjQXWrD97tj2fZ5I1XnQz9tUICXMZouIBQhyqmDDAcnSx-_O3hAo7-7zfIb1yC0Bj0eFiaW3TUisYjKi-zauFEV00R0j2yKhi3X_xZ8YdbEzytBl5wpID9HWabdXsobC4p1qVBbm2rkkqpbyg_SHYsy6bZ5uxgztrZnvn3x7OomeA6NW6MCjYuM1W3S3ckiD2FM5XeBifj9BT0IxoQ1Uz6oIYBB09WN8RyhfWnyn_rZ7QZ0YiJM5lbVuLuZVVKXEOOHgDo1dwOFf9mHZIapniQTr7RY7orp372eeD9vX8T5cjRsL8MEtUTM6qtbuRGQmy49S1rcfPtz14ArhCGN9hunqjZF8TL_gLA8uTArNnUAEfNokzVuhrRKLLl_6bFJVdTKc3XAfMl1L_mQDalM=w835-h626-no");
+
+    }
 
     .topnav {
         overflow: hidden;
@@ -84,21 +90,11 @@
         text-align: center;
         vertical-align: middle;
         font-size: 35px;
-        font-weight: bold;
-        color: #7ba0db
+        font-weight: italic;
+        color: white;
     }
 
-    .bg-image {
-        background-image: url("https://lh3.googleusercontent.com/vv6yj2uOmU2kH8yvwlZqRIazdQiRfJhP0HNGheqbN8lLZD0ooXMYzTOTf_1qRUhsXRNfAuvaDa7B7UQn0QsqDUinAiNfLAOdIUNX4oAn45Lvuk_AR3jAjPsDXf6FY_6PyHYcGcRNbrodvtk33WU44n3Uulm9ONIlt8vZWcB42ZOJcEGSUoISAGlaGs9y_PmEZ8yq8tFX8HZ4gqSrMZ6cqvK3zygzxpOA8iWj84wpXTqK-OE3ceU2KNfTO4RLrXjEyCATWbr5ORmMhMNcP0kY1XXtJh8CD_SrpH5c51Pg0RjQXWrD97tj2fZ5I1XnQz9tUICXMZouIBQhyqmDDAcnSx-_O3hAo7-7zfIb1yC0Bj0eFiaW3TUisYjKi-zauFEV00R0j2yKhi3X_xZ8YdbEzytBl5wpID9HWabdXsobC4p1qVBbm2rkkqpbyg_SHYsy6bZ5uxgztrZnvn3x7OomeA6NW6MCjYuM1W3S3ckiD2FM5XeBifj9BT0IxoQ1Uz6oIYBB09WN8RyhfWnyn_rZ7QZ0YiJM5lbVuLuZVVKXEOOHgDo1dwOFf9mHZIapniQTr7RY7orp372eeD9vX8T5cjRsL8MEtUTM6qtbuRGQmy49S1rcfPtz14ArhCGN9hunqjZF8TL_gLA8uTArNnUAEfNokzVuhrRKLLl_6bFJVdTKc3XAfMl1L_mQDalM=w835-h626-no");
-            background-color: #b9d0ed;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-            background-size: cover;
-            filter: blur(8px);
-              -webkit-filter: blur(8px);
-            height: 100%;
-            background-position: center;
-    }
+
 
     .btn:hover {
               background-color: #71b7e3;
@@ -113,10 +109,10 @@
 
 
     <body>
-    <div class="bg-image>
+    <header></header>
     <h1></h1>
 <p>Login below with your account details</p>
-<div class="container">
+
 <form class="form-horizontal" method="post" action="/login">
   <label for="username">User name:</label>
     <input type="text" id="username" name="username"><br>
@@ -124,8 +120,8 @@
         <input type="password" id="password" name="password"><br><br>
        <button class="btn btn-outline-info" type="submit" value="Submit">Submit</button>
 </form>
-</div>
-</div>
+
+
 
 
   </body>
