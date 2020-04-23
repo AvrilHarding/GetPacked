@@ -51,10 +51,24 @@
 
       h1 {
         text-align: center;
+        color: white;
+
       }
 
-       .buttons {
-            text-align: center;
+       .btn {
+          background-color: white;
+          border: none;
+          border-radius: 5px
+          color: black;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+        }
+
+        .btn:hover {
+            background-color: #71b7e3;
         }
 
     </style>
@@ -66,13 +80,13 @@
 
 <div class="buttons">
 <form method="get" action="/newtrip">
-<button type="submit" value="Submit">New Trip!</button>
+<button class="btn btn-outline-info" type="submit" value="Submit">New Trip!</button>
 </form>
 </div>
 <br>
 <div class="buttons">
 <form method="get" action="/yourtrips">
-<button type="submit" value="Submit">Your Trips!</button>
+<button class="btn btn-outline-info" type="submit" value="Submit">Your Trips!</button>
 </form>
 </div>
 
