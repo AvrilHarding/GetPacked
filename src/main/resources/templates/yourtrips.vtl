@@ -48,27 +48,38 @@
       align-items: center:
       align: center;
         }
+
+
+table {
+        font-family: 'Baloo Bhaina 2', cursive;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
  </style>
 
-
-
-  <body>
-    <h1>Your trips!</h1>
+   <body>
+     <h1>Your trips!</h1>
 
 <table class="table table-hover">
-
-        <tbody>
           #foreach( $trips in $trips )
           <tr>
-            <th scope="row">
-            Trip name: $trips.trip_name,
-            Destination: $trips.destination,
-            Hotel name: $trips.hotel_name
-            <form method="get" action="/schedule">
+            <th> Trip name: $trips.trip_name</th>
+            <th> Destination: $trips.destination</th>
+            <th> Hotel name: $trips.hotel_name</th>
+
+            <th> <form method="get" action="/schedule">
             <button type="submit" name="trip_name" value=$trips.trip_name class="btn btn-primary" >View</button>
            #end
-           </form>
-        </tbody>
+           </form> </th>
+         </tr>
+
       </table>
 
   </body>
