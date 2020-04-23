@@ -87,20 +87,6 @@ public class Sql2oModel implements Model {
         }
     }
 
-//    @Override
-
-//    public void createSchedule(String trip_name, String restaurant_name, String activity_name) {
-//        try (Connection conn = sql2o.beginTransaction()) {
-//            conn.createQuery("insert into schedules(trip_name, restaurant_name, activity_name) VALUES (:trip_name, :restaurant_name, :activity_name)")
-//
-//                    .addParameter("trip_name", trip_name)
-//                    .addParameter("restaurant_name", restaurant_name)
-//                    .addParameter("activity_name", activity_name)
-//                    .executeUpdate();
-//            conn.commit();
-//
-//        }
-//    }
 
     @Override
     public void addRestaurants(String[] restaurant_names, String trip_name) {
@@ -146,17 +132,6 @@ public class Sql2oModel implements Model {
 
 
     @Override
-    public List<Schedules> getSchedule() {
-        try (Connection conn = sql2o.open()) {
-
-            List<Schedules> schedule = conn.createQuery("select trip_name, restaurant_name, activity_name from schedules")
-
-                    .executeAndFetch(Schedules.class);
-            return schedule;
-        }
-    }
-
-    @Override
     public List<Schedules> getOneSchedule(String trip_name) {
         try (Connection conn = sql2o.open()) {
 
@@ -166,14 +141,4 @@ public class Sql2oModel implements Model {
             return schedule;
         }
     }
-//    @Override
-//    public void loginUser(String username) {
-//        try (Connection conn = sql2o.open()) {
-//            conn.createQuery("insert into trips(username) VALUES (:username)")
-//                    .addParameter("username", username)
-//                    .executeUpdate();
-//
-//        }
-//    }
-
 }

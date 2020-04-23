@@ -2,7 +2,6 @@ package models;
 
 
 import java.util.List;
-import java.util.UUID;
 
 public interface Model {
 
@@ -15,18 +14,12 @@ public interface Model {
     List<Activities> getAllActivities(String destination);
     List getAllTrips(String username);
 
-
-//    void createSchedule(String trip_name, String restaurant_name, String activity_name);
-
     void addRestaurants(String[] restaurant_name, String trip_name);
 
     void addActivities(String[] activity_name, String trip_name);
-
-    List<Schedules> getSchedule();
 
     void addUser(String first_name, String last_name, String username, String email_address, String password);
 
     List<Schedules> getOneSchedule(String trip_name);
 
-//    void loginUser(String username);
 }
