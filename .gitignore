@@ -2,6 +2,8 @@ target/
 .idea/
 example.log
 example.log.1
+velocity.log.1
+velocity.log
 functional_tests/Gemfile.lock
 functional_tests/log_app_err.txt
 functional_tests/log_app_out.txt
